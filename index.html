@@ -41,10 +41,8 @@
         .bci-btn { background-color: #0f1e36; color: #fff; border: 2px solid #0f1e36; padding: 12px 35px; font-family: 'Georgia', serif; font-size: 1em; cursor: pointer; transition: all 0.3s ease; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; display: inline-block; }
         .bci-btn:hover { background-color: #c5a059; border-color: #c5a059; color: #0f1e36; font-weight: bold; }
         
+        /* Simplified modal exit mechanism */
         .hidden-layout { display: none !important; }
-        .blur-content { filter: blur(5px); pointer-events: none; height: 100vh; overflow: hidden; }
-
-        @media(max-width: 768px) { .grid, .contact-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -62,13 +60,13 @@
             </ul>
             <p style="font-style: italic; margin-top: 15px; font-size: 0.9em; color: #666;">All particulars published within this terminal are true, factual, and strictly aligned with the permitted Schedule under Rule 36 rules.</p>
             <div class="bci-btn-container">
-                <button type="button" class="bci-btn" onclick="document.getElementById('bciModal').style.display='none'; document.getElementById('mainContent').style.filter='none'; document.getElementById('mainContent').style.pointerEvents='auto'; document.getElementById('mainContent').style.height='auto'; document.getElementById('mainContent').style.overflow='visible';">I Agree</button>
+                <button type="button" class="bci-btn" onclick="document.getElementById('bciModal').className='hidden-layout';">I Agree</button>
             </div>
         </div>
     </div>
 
-    <!-- Main Website Framework Layout -->
-    <div id="mainContent" class="blur-content">
+    <!-- Main Website Framework Layout (No blur rules applied to avoid engine locks) -->
+    <div id="mainContent">
         <header>
             <div class="logo-container">
                 <img src="logo.png" alt="LawNat Logo" onerror="this.style.display='none'">
@@ -123,3 +121,8 @@
             </section>
 
             <section class="blog-section">
+                <h2>Academic Insights & Judgment Briefs</h2>
+                
+                <div class="post-preview">
+                    <h3>International Refugee Law and the Principle of Non-Refoulement</h3>
+                    <span class="post-date">Academic Commentary</span>
