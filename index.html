@@ -41,7 +41,6 @@
         .bci-btn { background-color: #0f1e36; color: #fff; border: 2px solid #0f1e36; padding: 12px 35px; font-family: 'Georgia', serif; font-size: 1em; cursor: pointer; transition: all 0.3s ease; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; display: inline-block; }
         .bci-btn:hover { background-color: #c5a059; border-color: #c5a059; color: #0f1e36; font-weight: bold; }
         
-        /* Simplified modal exit mechanism */
         .hidden-layout { display: none !important; }
     </style>
 </head>
@@ -65,64 +64,67 @@
         </div>
     </div>
 
-    <!-- Main Website Framework Layout (No blur rules applied to avoid engine locks) -->
-    <div id="mainContent">
-        <header>
-            <div class="logo-container">
-                <img src="logo.png" alt="LawNat Logo" onerror="this.style.display='none'">
+    <!-- Main Content Body -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="LawNat Logo" onerror="this.style.display='none'">
+        </div>
+        <h1>LawNat</h1>
+        <div class="lawyer-name">Manoj Kumar Tiwari</div>
+        <div class="credentials">B.Sc., DCA, LL.B • Advocate</div>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>Professional Framework</h2>
+            <p>Welcome to LawNat. Founded and maintained by Manoj Kumar Tiwari, Advocate, this portal operates as a premium research directory and professional legal repository. Anchored in New Delhi, the practice focuses on delivering precise statutory interpretation, complex appellate briefing configurations, and extensive academic tracking across volatile domestic and multilateral legal spaces.</p>
+        </section>
+
+        <section id="courts">
+            <h2>Jurisdictions & Practice Venues</h2>
+            <p>Handling formal documentation, legal research, and corporate/appellate filings across the following judicial organs in India:</p>
+            <div class="jurisdictions-list">
+                <strong>Supreme Court of India</strong> • High Court of Delhi & State High Courts • National Company Law Tribunal (NCLT) • National Company Law Appellate Tribunal (NCLAT) • National Consumer Disputes Redressal Commission (NCDRC) • National Green Tribunal (NGT) • District & Sessions Courts
             </div>
-            <h1>LawNat</h1>
-            <div class="lawyer-name">Manoj Kumar Tiwari</div>
-            <div class="credentials">B.Sc., DCA, LL.B • Advocate</div>
-        </header>
+        </section>
 
-        <div class="container">
-            <section id="about">
-                <h2>Professional Framework</h2>
-                <p>Welcome to LawNat. Founded and maintained by Manoj Kumar Tiwari, Advocate, this portal operates as a premium research directory and professional legal repository. Anchored in New Delhi, the practice focuses on delivering precise statutory interpretation, complex appellate briefing configurations, and extensive academic tracking across volatile domestic and multilateral legal spaces.</p>
-            </section>
-
-            <section id="courts">
-                <h2>Jurisdictions & Practice Venues</h2>
-                <p>Handling formal documentation, legal research, and corporate/appellate filings across the following judicial organs in India:</p>
-                <div class="jurisdictions-list">
-                    <strong>Supreme Court of India</strong> • High Court of Delhi & State High Courts • National Company Law Tribunal (NCLT) • National Company Law Appellate Tribunal (NCLAT) • National Consumer Disputes Redressal Commission (NCDRC) • National Green Tribunal (NGT) • District & Sessions Courts
+        <section id="expertise">
+            <h2>Dimensions of Practice</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Public International Law</h3>
+                    <p>Providing expert legal scrutiny involving the application of multilateral treaties, state responsibility frameworks, state immunity doctrines, and diplomatic convention dynamics before domestic courts and international forums.</p>
                 </div>
-            </section>
-
-            <section id="expertise">
-                <h2>Dimensions of Practice</h2>
-                <div class="grid">
-                    <div class="card">
-                        <h3>Public International Law</h3>
-                        <p>Providing expert legal scrutiny involving the application of multilateral treaties, state responsibility frameworks, state immunity doctrines, and diplomatic convention dynamics before domestic courts and international forums.</p>
-                    </div>
-                    <div class="card">
-                        <h3>International Refugee & Asylum Law</h3>
-                        <p>Rigorous handling of compliance frameworks governed by the 1951 Refugee Convention and its 1967 Protocol, custom evaluations regarding UNHCR mandate protections, human rights enforcement architectures, and the absolute invocation of the customary international principle of <em>non-refoulement</em>.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Appellate Litigation</h3>
-                        <p>Drafting structured Special Leave Petitions (SLPs), high appellate filings, statutory appeals, and comprehensive writs under Constitutional frameworks.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Corporate & Insolvency Jurisprudence</h3>
-                        <p>Navigating systemic corporate asset resolution practices under the Insolvency and Bankruptcy Code (IBC), alongside managing company petition actions before the NCLT and NCLAT.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Consumer Dispute Resolution</h3>
-                        <p>Handling premium advocacy, consumer fraud liability audits, and multi-tier claims before District, State, and National Consumer Commissions (NCDRC).</p>
-                    </div>
-                    <div class="card">
-                        <h3>Civil, Criminal & Statutory Drafting</h3>
-                        <p>Precision execution of legal notices, statement of claims, complex commercial contracts, bail applications, and cross-examination frameworks within Sessions Courts.</p>
-                    </div>
+                <div class="card">
+                    <h3>International Refugee & Asylum Law</h3>
+                    <p>Rigorous handling of compliance frameworks governed by the 1951 Refugee Convention and its 1967 Protocol, custom evaluations regarding UNHCR mandate protections, human rights enforcement architectures, and the absolute invocation of the customary international principle of <em>non-refoulement</em>.</p>
                 </div>
-            </section>
+                <div class="card">
+                    <h3>Appellate Litigation</h3>
+                    <p>Drafting structured Special Leave Petitions (SLPs), high appellate filings, statutory appeals, and comprehensive writs under Constitutional frameworks.</p>
+                </div>
+                <div class="card">
+                    <h3>Corporate & Insolvency Jurisprudence</h3>
+                    <p>Navigating systemic corporate asset resolution practices under the Insolvency and Bankruptcy Code (IBC), alongside managing company petition actions before the NCLT and NCLAT.</p>
+                </div>
+                <div class="card">
+                    <h3>Consumer Dispute Resolution</h3>
+                    <p>Handling premium advocacy, consumer fraud liability audits, and multi-tier claims before District, State, and National Consumer Commissions (NCDRC).</p>
+                </div>
+                <div class="card">
+                    <h3>Civil, Criminal & Statutory Drafting</h3>
+                    <p>Precision execution of legal notices, statement of claims, complex commercial contracts, bail applications, and cross-examination frameworks within Sessions Courts.</p>
+                </div>
+            </div>
+        </section>
 
-            <section class="blog-section">
-                <h2>Academic Insights & Judgment Briefs</h2>
-                
-                <div class="post-preview">
-                    <h3>International Refugee Law and the Principle of Non-Refoulement</h3>
-                    <span class="post-date">Academic Commentary</span>
+        <section class="blog-section">
+            <h2>Academic Insights & Judgment Briefs</h2>
+            
+            <div class="post-preview">
+                <h3>International Refugee Law and the Principle of Non-Refoulement</h3>
+                <span class="post-date">Academic Commentary</span>
+                <p>An in-depth analysis parsing the intersection between domestic constitutional protections under Article 21 and customary international obligations regarding refugee protection. Exploring how higher courts apply international human rights treaties in the absence of explicit domestic refugee legislation...</p>
+            </div>
+
+            <div class="post-preview">
