@@ -29,7 +29,7 @@
         .contact-card h3 { color: #c5a059; margin-top: 0; border-bottom: 1px solid #334460; padding-bottom: 5px; font-size: 1.1em; }
         .contact-card p { margin: 8px 0; font-size: 0.95em; }
         .contact-card a { color: #c5a059; text-decoration: none; font-weight: bold; }
-        footer { text-align: center; padding: 25px; color: #666; font-size: 0.85em; margin-top: 60px; border-top: 1px solid #e0e0e0; }
+        footer { text-align: center; padding: 25px; color: #666; font-size: 0.85em; margin-top: 60px; border-top: 1px solid #e0e0e0; padding-bottom: 40px; }
 
         /* BCI Compliance Pop-up Modal Styling */
         .bci-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 30, 54, 0.98); display: flex; align-items: center; justify-content: center; z-index: 10000; padding: 20px; box-sizing: border-box; }
@@ -41,8 +41,8 @@
         .bci-btn { background-color: #0f1e36; color: #fff; border: 2px solid #0f1e36; padding: 12px 35px; font-family: 'Georgia', serif; font-size: 1em; cursor: pointer; transition: all 0.3s ease; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; display: inline-block; }
         .bci-btn:hover { background-color: #c5a059; border-color: #c5a059; color: #0f1e36; font-weight: bold; }
         
-        /* Blur Content Modifiers */
-        .blur-content { filter: blur(5px); pointer-events: none; }
+        .hidden-layout { display: none !important; }
+        .blur-content { filter: blur(5px); pointer-events: none; height: 100vh; overflow: hidden; }
 
         @media(max-width: 768px) { .grid, .contact-grid { grid-template-columns: 1fr; } }
     </style>
@@ -62,8 +62,7 @@
             </ul>
             <p style="font-style: italic; margin-top: 15px; font-size: 0.9em; color: #666;">All particulars published within this terminal are true, factual, and strictly aligned with the permitted Schedule under Rule 36 rules.</p>
             <div class="bci-btn-container">
-                <!-- Direct inline commands ensure swift layout handling without dependency delays -->
-                <button type="button" class="bci-btn" onclick="document.getElementById('bciModal').style.display='none'; document.getElementById('mainContent').style.filter='none'; document.getElementById('mainContent').style.pointerEvents='auto';">I Agree</button>
+                <button type="button" class="bci-btn" onclick="document.getElementById('bciModal').style.display='none'; document.getElementById('mainContent').style.filter='none'; document.getElementById('mainContent').style.pointerEvents='auto'; document.getElementById('mainContent').style.height='auto'; document.getElementById('mainContent').style.overflow='visible';">I Agree</button>
             </div>
         </div>
     </div>
@@ -124,4 +123,3 @@
             </section>
 
             <section class="blog-section">
-                <h2>Academic Insights & Judgment Briefs</h2>
