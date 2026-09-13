@@ -15,10 +15,6 @@
         .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
         h2 { border-bottom: 2px solid #0f1e36; padding-bottom: 8px; color: #0f1e36; font-size: 1.6em; margin-top: 40px; }
         
-        /* Bar Council of India Compliance Banner */
-        .bci-disclaimer { background-color: #f7f9fa; border: 1px solid #dcdfe3; border-left: 5px solid #0f1e36; padding: 18px; margin-bottom: 30px; font-size: 0.9em; color: #444; }
-        .bci-disclaimer h4 { margin: 0 0 8px 0; color: #0f1e36; text-transform: uppercase; font-size: 0.95em; letter-spacing: 1px; }
-        
         .jurisdictions-list { background: #f4f6f9; padding: 20px; border-left: 5px solid #c5a059; margin-top: 20px; font-size: 1.05em; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
         .card { background: #fff; padding: 20px; border: 1px solid #e0e0e0; border-top: 4px solid #0f1e36; }
@@ -27,129 +23,108 @@
         .post-preview { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
         .post-preview h3 { margin-bottom: 5px; color: #0f1e36; }
         .post-date { font-size: 0.85em; color: #666; font-style: italic; }
+        
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
         .contact-card { background-color: #0f1e36; color: #fff; padding: 25px; border-radius: 4px; border-top: 4px solid #c5a059; }
         .contact-card h3 { color: #c5a059; margin-top: 0; border-bottom: 1px solid #334460; padding-bottom: 5px; font-size: 1.1em; }
         .contact-card p { margin: 8px 0; font-size: 0.95em; }
         .contact-card a { color: #c5a059; text-decoration: none; font-weight: bold; }
         footer { text-align: center; padding: 25px; color: #666; font-size: 0.85em; margin-top: 60px; border-top: 1px solid #e0e0e0; }
+
+        /* BCI Compliance Pop-up Modal Styling */
+        .bci-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 30, 54, 0.95); display: flex; align-items: center; justify-content: center; z-index: 10000; padding: 20px; box-sizing: border-box; }
+        .bci-modal-content { background: #fff; max-width: 650px; width: 100%; padding: 35px; border-radius: 6px; border-top: 6px solid #c5a059; box-shadow: 0 10px 30px rgba(0,0,0,0.3); font-size: 0.95em; color: #333; }
+        .bci-modal-content h3 { margin-top: 0; color: #0f1e36; text-transform: uppercase; letter-spacing: 1px; font-size: 1.2em; border-bottom: 2px solid #f4f6f9; padding-bottom: 10px; }
+        .bci-modal-content ul { margin: 15px 0; padding-left: 20px; }
+        .bci-modal-content li { margin-bottom: 10px; }
+        .bci-btn-container { text-align: center; margin-top: 25px; }
+        .bci-btn { background-color: #0f1e36; color: #fff; border: 2px solid #0f1e36; padding: 12px 35px; font-family: 'Georgia', serif; font-size: 1em; cursor: pointer; transition: all 0.3s ease; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; }
+        .bci-btn:hover { background-color: #c5a059; border-color: #c5a059; color: #0f1e36; font-weight: bold; }
+        
+        /* Blur class when modal is active */
+        .blur-content { filter: blur(5px); pointer-events: none; }
+
         @media(max-width: 768px) { .grid, .contact-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="LawNat Logo" onerror="this.style.display='none'">
-        </div>
-        <h1>LawNat</h1>
-        <div class="lawyer-name">Manoj Kumar Tiwari</div>
-        <div class="credentials">B.Sc., DCA, LL.B • Advocate</div>
-    </header>
-
-    <div class="container">
-        <!-- Statutory Compliance Disclaimer as per BCI Rule 36 -->
-        <div class="bci-disclaimer">
-            <h4>Compliance Disclaimer (Bar Council of India Rule 36)</h4>
-            <p>As per the rules of the Bar Council of India, advocates are prohibited from soliciting work or advertising in any manner. By accessing this website (lawnat.com), the user acknowledges that:</p>
-            <ul style="margin: 5px 0 10px 20px; padding: 0;">
-                <li>The information provided herein is solely for informational and educational purposes and should not be construed as legal advice, solicitation, or an advertisement.</li>
-                <li>The user wishes to gain more information about LawNat and Manoj Kumar Tiwari, Advocate, for their own information and use.</li>
-                <li>No advocate-client relationship is created through the access of information on this website.</li>
+    <!-- BCI Compliance Disclaimer Pop-up Window -->
+    <div id="bciModal" class="bci-modal-overlay">
+        <div class="bci-modal-content">
+            <h3>Bar Council of India Compliance Declaration</h3>
+            <p>Under the statutory rules of the Bar Council of India (specifically Rule 36 of Section IV, Chapter II, Part VI), advocates are prohibited from soliciting work or advertising their professional services in any form.</p>
+            <p>By clicking <strong>"I AGREE"</strong> below, the user explicitly acknowledges and confirms the following protocols:</p>
+            <ul>
+                <li>The user is seeking information regarding LawNat and Manoj Kumar Tiwari, Advocate, entirely out of their own volition and for informational or academic purposes.</li>
+                <li>There has been no form of advertisement, personal communication, solicitation, invitation, or inducement of any sort whatsoever from this office or its members to solicit work through this platform.</li>
+                <li>The materials provided on this website are educational assets and do not constitute legal advice, strategic counseling, or create a formal advocate-client relationship.</li>
             </ul>
-            <p style="margin: 0; font-style: italic;"><strong>Declaration:</strong> The particulars and information furnished on this website are true and accurate in accordance with the Schedule to Rule 36 of the Bar Council of India Rules.</p>
+            <p style="font-style: italic; margin-top: 15px; font-size: 0.9em; color: #666;">All particulars published within this terminal are true, factual, and strictly aligned with the permitted Schedule under Rule 36 rules.</p>
+            <div class="bci-btn-container">
+                <button class="bci-btn" onclick="acceptDisclaimer()">I Agree</button>
+            </div>
         </div>
-
-        <section id="about">
-            <h2>Professional Profile</h2>
-            <p>Welcome to LawNat. Founded by Manoj Kumar Tiwari, Advocate, this platform serves as an informational resource and professional portfolio based out of New Delhi. The focus of the practice encompasses appellate litigation, regulatory analysis, international legal frameworks, and research-driven scrutiny of statutory and judicial precedents.</p>
-        </section>
-
-        <section id="courts">
-            <h2>Jurisdictions & Practice Venues</h2>
-            <p>Handling legal advisory, documentation, and appearances across the following forums and judicial panels in India:</p>
-            <div class="jurisdictions-list">
-                <strong>Supreme Court of India</strong> • High Court of Delhi & State High Courts • National Company Law Tribunal (NCLT) • National Company Law Appellate Tribunal (NCLAT) • National Consumer Disputes Redressal Commission (NCDRC) • National Green Tribunal (NGT) • District & Sessions Courts
-            </div>
-        </section>
-
-        <section id="expertise">
-            <h2>Areas of Practice</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>International Law</h3>
-                    <p>Analysis of cross-border treaties, public international legal principles, diplomatic conventions, and jurisdictional coordination under private international legal frameworks.</p>
-                </div>
-                <div class="card">
-                    <h3>Refugee & Asylum Law</h3>
-                    <p>Research and legal assistance concerning international refugee conventions, UNHCR mandate determinations, human rights protections, and non-refoulement doctrines.</p>
-                </div>
-                <div class="card">
-                    <h3>Appellate Litigation</h3>
-                    <p>Drafting special leave petitions, statutory appeals, writ petitions, and formal pleadings before higher appellate courts and tribunals.</p>
-                </div>
-                <div class="card">
-                    <h3>Corporate & Insolvency Law</h3>
-                    <p>Advisory regarding proceedings under the Insolvency and Bankruptcy Code (IBC), company petitions, and administrative disputes before the NCLT and NCLAT.</p>
-                </div>
-                <div class="card">
-                    <h3>Consumer Protections</h3>
-                    <p>Advocacy, advisory, and dispute documentation under the Consumer Protection Act before District Commissions, State Commissions, and the NCDRC.</p>
-                </div>
-                <div class="card">
-                    <h3>Civil & Criminal Law</h3>
-                    <p>Drafting of legal notices, plaints, written statements, commercial contracts, bail applications, and trial representation across competent courts of record.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="insights" class="blog-section">
-            <h2>Legal Insights & Judicial Commentary</h2>
-            
-            <div class="post-preview">
-                <h3>International Refugee Law and the Principle of Non-Refoulement</h3>
-                <span class="post-date">Academic Commentary</span>
-                <p>A jurisprudential examination of customary international law obligations governing refugee protection, sovereign discretion, and the evolving judicial standards adopted by domestic courts...</p>
-            </div>
-
-            <div class="post-preview">
-                <h3>Procedural Parameters under NCLT and NCLAT</h3>
-                <span class="post-date">Regulatory Update</span>
-                <p>An overview of recent benchmark directions regarding timeline discipline, admission standards for insolvency applications, and appellate thresholds established by corporate tribunals...</p>
-            </div>
-        </section>
-
-        <section id="office-details">
-            <h2>Office & Chamber Directory</h2>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <h3>Chamber Address</h3>
-                    <p><strong>Chamber: 86, A.K. Sen Block</strong></p>
-                    <p>Supreme Court of India</p>
-                    <p>New Delhi - 110001</p>
-                </div>
-                <div class="contact-card">
-                    <h3>Office / Residence</h3>
-                    <p>B1-47, 402, Gali No.3</p>
-                    <p>New Ashok Nagar</p>
-                    <p>New Delhi - 110096</p>
-                </div>
-            </div>
-
-            <div class="contact-grid" style="grid-template-columns: 1fr; text-align: center; margin-top: 20px;">
-                <div class="contact-card" style="background-color: #0f1e36; border-top: 4px solid #c5a059;">
-                    <h3 style="color: #c5a059;">Contact Coordinates</h3>
-                    <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 10px;">📞 +91-9971208337</p>
-                    <p>📧 <a href="mailto:adv.mktiwari@hotmail.com">adv.mktiwari@hotmail.com</a></p>
-                    <p>🌐 <a href="https://lawnat.com">://lawnat.com</a></p>
-                </div>
-            </div>
-        </section>
     </div>
 
-    <footer>
-        <p>&copy; 2026 LawNat | Manoj Kumar Tiwari, Advocate. All particulars published in compliance with the Bar Council of India Rules.</p>
-    </footer>
+    <!-- Main Website Framework Layout (Wrapped inside an ID so we can blur/unblur it based on modal) -->
+    <div id="mainContent" class="blur-content">
+        <header>
+            <div class="logo-container">
+                <img src="logo.png" alt="LawNat Logo" onerror="this.style.display='none'">
+            </div>
+            <h1>LawNat</h1>
+            <div class="lawyer-name">Manoj Kumar Tiwari</div>
+            <div class="credentials">B.Sc., DCA, LL.B • Advocate</div>
+        </header>
 
-</body>
-</html>
+        <div class="container">
+            <section id="about">
+                <h2>Professional Framework</h2>
+                <p>Welcome to LawNat. Founded and maintained by Manoj Kumar Tiwari, Advocate, this portal operates as a premium research directory and professional legal repository. Anchored in New Delhi, the practice focuses on delivering precise statutory interpretation, complex appellate briefing configurations, and extensive academic tracking across volatile domestic and multilateral legal spaces.</p>
+            </section>
+
+            <section id="courts">
+                <h2>Jurisdictions & Practice Venues</h2>
+                <p>Handling formal documentation, legal research, and corporate/appellate filings across the following judicial organs in India:</p>
+                <div class="jurisdictions-list">
+                    <strong>Supreme Court of India</strong> • High Court of Delhi & State High Courts • National Company Law Tribunal (NCLT) • National Company Law Appellate Tribunal (NCLAT) • National Consumer Disputes Redressal Commission (NCDRC) • National Green Tribunal (NGT) • District & Sessions Courts
+                </div>
+            </section>
+
+            <section id="expertise">
+                <h2>Dimensions of Practice</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Public International Law</h3>
+                        <p>Providing expert legal scrutiny involving the application of multilateral treaties, state responsibility frameworks, state immunity doctrines, and diplomatic convention dynamics before domestic courts and international forums.</p>
+                    </div>
+                    <div class="card">
+                        <h3>International Refugee & Asylum Law</h3>
+                        <p>Rigorous handling of compliance frameworks governed by the 1951 Refugee Convention and its 1967 Protocol, custom evaluations regarding UNHCR mandate protections, human rights enforcement architectures, and the absolute invocation of the customary international principle of <em>non-refoulement</em>.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Appellate Litigation</h3>
+                        <p>Drafting structured Special Leave Petitions (SLPs), high appellate filings, statutory appeals, and comprehensive writs under Constitutional frameworks.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Corporate & Insolvency Jurisprudence</h3>
+                        <p>Navigating systemic corporate asset resolution practices under the Insolvency and Bankruptcy Code (IBC), alongside managing company petition actions before the NCLT and NCLAT.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Consumer Dispute Resolution</h3>
+                        <p>Handling premium advocacy, consumer fraud liability audits, and multi-tier claims before District, State, and National Consumer Commissions (NCDRC).</p>
+                    </div>
+                    <div class="card">
+                        <h3>Civil, Criminal & Statutory Drafting</h3>
+                        <p>Precision execution of legal notices, statement of claims, complex commercial contracts, bail applications, and cross-examination frameworks within Sessions Courts.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="insights" class="blog-section">
+                <h2>Academic Insights & Judgment Briefs</h2>
+                
+                <div class="post-preview">
+                    <h3>The Principle of Non-Refoulement and Article 21 of the Indian Constitution</h3>
+                    <span class="post-date">Academic Commentary</span>
