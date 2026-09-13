@@ -41,7 +41,7 @@
         .bci-btn { background-color: #0f1e36; color: #fff; border: 2px solid #0f1e36; padding: 12px 35px; font-family: 'Georgia', serif; font-size: 1em; cursor: pointer; transition: all 0.3s ease; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; }
         .bci-btn:hover { background-color: #c5a059; border-color: #c5a059; color: #0f1e36; font-weight: bold; }
         
-        /* Blur class when modal is active */
+        /* Layout target for blurring content */
         .blur-content { filter: blur(5px); pointer-events: none; }
 
         @media(max-width: 768px) { .grid, .contact-grid { grid-template-columns: 1fr; } }
@@ -67,7 +67,7 @@
         </div>
     </div>
 
-    <!-- Main Website Framework Layout (Wrapped inside an ID so we can blur/unblur it based on modal) -->
+    <!-- Main Website Framework Layout -->
     <div id="mainContent" class="blur-content">
         <header>
             <div class="logo-container">
@@ -122,9 +122,9 @@
                 </div>
             </section>
 
-            <section id="insights" class="blog-section">
+            <section id="insights" class="blur-content blog-section" style="filter: none; pointer-events: auto;">
                 <h2>Academic Insights & Judgment Briefs</h2>
                 
                 <div class="post-preview">
-                    <h3>The Principle of Non-Refoulement and Article 21 of the Indian Constitution</h3>
+                    <h3>International Refugee Law and the Principle of Non-Refoulement</h3>
                     <span class="post-date">Academic Commentary</span>
