@@ -7,10 +7,11 @@
     <style>
         body { font-family: 'Georgia', serif; color: #222; line-height: 1.6; margin: 0; padding: 0; background-color: #fcfcfc; display: flex; flex-direction: column; min-height: 100vh; }
         header { background-color: #0f1e36; color: #fff; padding: 15px 40px; border-top: 4px solid #c5a059; border-bottom: 4px solid #c5a059; display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; }
-        .logo-container img { max-width: 110px; height: auto; display: block; border: none; }
+        .logo-container img { max-height: 70px; width: auto; display: block; border: none; }
         .center-branding { text-align: center; flex: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; }
         .center-branding h1 { margin: 0; font-size: 2.4em; font-weight: normal; letter-spacing: 2px; color: #c5a059; line-height: 1; }
-        .center-branding .motto { margin: 6px 0 0 0; color: #fff; font-style: italic; font-size: 0.85em; letter-spacing: 5px; text-transform: uppercase; text-align: center; width: 100%; display: block; padding-left: 5px; box-sizing: border-box; }
+        /* Expanded letter-spacing to align Serving Justice perfectly beneath LawNat */
+        .center-branding .motto { margin: 6px 0 0 0; color: #fff; font-style: italic; font-size: 0.85em; letter-spacing: 5.5px; text-transform: uppercase; text-align: center; width: 100%; display: block; padding-left: 5.5px; box-sizing: border-box; }
         .right-credentials { text-align: right; flex: 1; }
         .right-credentials .lawyer-name { font-size: 1.3em; color: #fff; font-weight: normal; margin: 0; line-height: 1.1; }
         .right-credentials .advocate-title { font-size: 1em; color: #c5a059; font-weight: bold; text-transform: uppercase; margin: 2px 0 0 0; letter-spacing: 1px; }
@@ -48,14 +49,7 @@
     <div id="bciModal" class="bci-modal-overlay">
         <div class="bci-modal-content">
             <h3>Bar Council of India Compliance Declaration</h3>
-            <p>Under statutory rules of the Bar Council of India (specifically Rule 36 of Section IV, Chapter II, Part VI), advocates are prohibited from soliciting work or advertising their professional services in any form.</p>
-            <p>By clicking <strong>"I AGREE"</strong> below, the user explicitly acknowledges and confirms the following protocols:</p>
-            <ul>
-                <li>The user is seeking information regarding LawNat and Manoj Kumar Tiwari, Advocate, entirely out of their own volition and for informational or academic purposes.</li>
-                <li>There has been no form of advertisement, personal communication, solicitation, invitation, or inducement of any sort whatsoever from this office or its members to solicit work through this platform.</li>
-                <li>The materials provided on this website are educational assets and do not constitute legal advice, strategic counseling, or create a formal advocate-client relationship.</li>
-            </ul>
-            <p style="font-style: italic; margin-top: 15px; font-size: 0.9em; color: #666;">All particulars published within this terminal are true, factual, and strictly aligned with the permitted Schedule under Rule 36 rules.</p>
+            <p>Under statutory rules of the Bar Council of India, advocates are prohibited from soliciting work or advertising. This portal serves purely as an educational and informational directory mapping credentials and write-ups.</p>
             <div style="text-align: center; margin-top: 25px;"><button type="button" class="bci-btn" onclick="document.getElementById('bciModal').style.display='none';">I Agree</button></div>
         </div>
     </div>
@@ -86,3 +80,9 @@
             <div class="grid">
                 <div class="card"><h3>Public International Law</h3><p>Providing expert legal scrutiny involving the application of multilateral treaties, state responsibility frameworks, state immunity doctrines, and diplomatic convention dynamics before domestic courts and international forums.</p></div>
                 <div class="card"><h3>International Refugee & Asylum Law</h3><p>Rigorous handling of compliance frameworks governed by the 1951 Refugee Convention, custom evaluations regarding UNHCR mandate protections, human rights enforcement architectures, and the absolute invocation of the customary international principle of <em>non-refoulement</em>.</p></div>
+                <div class="card"><h3>Appellate Litigation</h3><p>Drafting structured Special Leave Petitions (SLPs), high appellate filings, statutory appeals, and comprehensive writs under Constitutional frameworks.</p></div>
+                <div class="card"><h3>Corporate & Insolvency Jurisprudence</h3><p>Navigating systemic corporate asset resolution practices under the Insolvency and Bankruptcy Code (IBC), alongside managing company petition actions before the NCLT and NCLAT.</p></div>
+                <div class="card"><h3>Consumer Dispute Resolution</h3><p>Handling premium advocacy, consumer fraud liability audits, and multi-tier claims before District, State, and National Consumer Commissions (NCDRC).</p></div>
+                <div class="card"><h3>Civil, Criminal & Statutory Drafting</h3><p>Precision execution of legal notices, statement of claims, commercial contracts, bail applications, and trial advocacy metrics within Sessions Courts.</p></div>
+            </div>
+        </div>
