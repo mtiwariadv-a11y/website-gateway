@@ -11,15 +11,15 @@
         header { background-color: #0f1e36; color: #fff; padding: 15px 40px; border-top: 4px solid #c5a059; border-bottom: 4px solid #c5a059; display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; }
         .logo-container img { max-width: 110px; height: auto; display: block; border: none; }
         
-        /* Fixed Center Branding Container - Enforces identical structural boundaries */
+        /* Fixed Center Branding Container - Sets equal limits */
         .center-branding { text-align: center; flex: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; }
         
         /* Locked text block wrapper ensuring text width bounds stay perfectly matched */
-        .text-lock-box { display: inline-flex; flex-direction: column; align-items: center; width: auto; max-width: 100%; }
-        .text-lock-box h1 { margin: 0; font-size: 2.5em; font-weight: normal; letter-spacing: 1px; color: #c5a059; line-height: 1; text-align: center; }
+        .text-lock-box { display: inline-flex; flex-direction: column; align-items: center; width: 160px; max-width: 100%; }
+        .text-lock-box h1 { margin: 0; font-size: 2.5em; font-weight: normal; letter-spacing: 1px; color: #c5a059; line-height: 1; text-align: center; width: 100%; }
         
-        /* Re-calibrated structural letter spacing to align Serving Justice perfectly beneath LawNat text edges */
-        .text-lock-box .motto { margin: 6px 0 0 0; color: #fff; font-style: italic; font-size: 0.85em; letter-spacing: 2.2px; text-transform: uppercase; text-align: center; width: 100%; display: block; padding-left: 2.2px; box-sizing: border-box; border-top: 1px solid rgba(197, 160, 89, 0.3); padding-top: 4px; }
+        /* STRIPPED ALL CAPS TRANSLATIONS - Enforces original title casing layout */
+        .text-lock-box .motto { margin: 6px 0 0 0; color: #fff; font-style: italic; font-size: 0.95em; letter-spacing: 0.5px; text-align: center; width: 100%; display: block; box-sizing: border-box; border-top: 1px solid rgba(197, 160, 89, 0.3); padding-top: 4px; white-space: nowrap; }
         
         .right-credentials { text-align: right; flex: 1; }
         .right-credentials .lawyer-name { font-size: 1.3em; color: #fff; font-weight: normal; margin: 0; line-height: 1.1; }
@@ -97,7 +97,6 @@
     <header>
         <div class="logo-container"><img src="logo.png" alt="LawNat Logo" onerror="this.style.display='none'"></div>
         <div class="center-branding">
-            <!-- Hardware Lock Box ensures both elements share an identical visual footprint width -->
             <div class="text-lock-box">
                 <h1>LawNat</h1>
                 <div class="motto">Serving Justice</div>
@@ -128,44 +127,20 @@
         <div id="expertiseWindow" class="tab-window">
             <h2>Dimensions of Practice</h2>
             <div class="grid">
-                <div class="card">
-                    <h3>Public International Law</h3>
-                    <p>Providing expert legal scrutiny involving the application of multilateral treaties, state responsibility frameworks, state immunity doctrines, and diplomatic convention dynamics before domestic courts and international forums.</p>
-                </div>
-                <div class="card">
-                    <h3>International Refugee & Asylum Law</h3>
-                    <p>Rigorous handling of compliance frameworks governed by the 1951 Refugee Convention, custom evaluations regarding UNHCR mandate protections, human rights enforcement architectures, and the absolute invocation of the customary international principle of <em>non-refoulement</em>.</p>
-                </div>
-                <div class="card">
-                    <h3>Appellate Litigation</h3>
-                    <p>Drafting structured Special Leave Petitions (SLPs), high appellate filings, statutory appeals, and comprehensive writs under Constitutional frameworks.</p>
-                </div>
-                <div class="card">
-                    <h3>Corporate & Insolvency Jurisprudence</h3>
-                    <p>Navigating systemic corporate asset resolution practices under the Insolvency and Bankruptcy Code (IBC), alongside managing company petition actions before the NCLT and NCLAT.</p>
-                </div>
-                <div class="card">
-                    <h3>Consumer Dispute Resolution</h3>
-                    <p>Handling premium advocacy, consumer fraud liability audits, and multi-tier claims before District, State, and National Consumer Commissions (NCDRC).</p>
-                </div>
-                <div class="card">
-                    <h3>Civil, Criminal & Statutory Drafting</h3>
-                    <p>Precision execution of legal notices, statement of claims, commercial contracts, bail applications, and trial advocacy metrics within Sessions Courts.</p>
-                </div>
+                <div class="card"><h3>Public International Law</h3><p>Providing expert legal scrutiny involving the application of multilateral treaties, state responsibility frameworks, state immunity doctrines, and diplomatic convention dynamics before domestic courts and international forums.</p></div>
+                <div class="card"><h3>International Refugee & Asylum Law</h3><p>Rigorous handling of compliance frameworks governed by the 1951 Refugee Convention, custom evaluations regarding UNHCR mandate protections, human rights enforcement architectures, and the absolute invocation of the customary international principle of <em>non-refoulement</em>.</p></div>
+                <div class="card"><h3>Appellate Litigation</h3><p>Drafting structured Special Leave Petitions (SLPs), high appellate filings, statutory appeals, and comprehensive writs under Constitutional frameworks.</p></div>
+                <div class="card"><h3>Corporate & Insolvency Jurisprudence</h3><p>Navigating systemic corporate asset resolution practices under the Insolvency and Bankruptcy Code (IBC), alongside managing company petition actions before the NCLT and NCLAT.</p></div>
+                <div class="card"><h3>Consumer Dispute Resolution</h3><p>Handling premium advocacy, consumer fraud liability audits, and multi-tier claims before District, State, and National Consumer Commissions (NCDRC).</p></div>
+                <div class="card"><h3>Civil, Criminal & Statutory Drafting</h3><p>Precision execution of legal notices, statement of claims, commercial contracts, bail applications, and trial advocacy metrics within Sessions Courts.</p></div>
             </div>
         </div>
 
         <!-- TAB 3: ACADEMIC SECTION -->
         <div id="academicWindow" class="tab-window">
             <h2>Academic Section & Legal Write-Ups</h2>
-            <div class="post-preview">
-                <h3>International Refugee Law and the Principle of Non-Refoulement</h3>
-                <p>An in-depth analysis parsing the intersection between domestic constitutional protections under Article 21 and customary international obligations regarding refugee protection. Exploring how higher courts apply international human rights treaties in the absence of explicit domestic refugee legislation...</p>
-            </div>
-            <div class="post-preview">
-                <h3>Procedural Precedents in Commercial Insolvency</h3>
-                <p>Evaluating recent judicial benchmarks handed down regarding strict timeline limits for corporate insolvency resolution processes, asset preservation rules, and the changing criteria for appellate review under corporate law tribunals...</p>
-            </div>
+            <div class="post-preview"><h3>International Refugee Law and the Principle of Non-Refoulement</h3><p>An in-depth analysis parsing the intersection between domestic constitutional protections under Article 21 and customary international obligations regarding refugee protection. Exploring how higher courts apply international human rights treaties in the absence of explicit domestic refugee legislation...</p></div>
+            <div class="post-preview"><h3>Procedural Precedents in Commercial Insolvency</h3><p>Evaluating recent judicial benchmarks handed down regarding strict timeline limits for corporate insolvency resolution processes, asset preservation rules, and the changing criteria for appellate review under corporate law tribunals...</p></div>
         </div>
 
         <!-- TAB 4: DIRECTORY & OFFICE -->
