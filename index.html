@@ -11,11 +11,15 @@
         header { background-color: #0f1e36; color: #fff; padding: 15px 40px; border-top: 4px solid #c5a059; border-bottom: 4px solid #c5a059; display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; }
         .logo-container img { max-width: 110px; height: auto; display: block; border: none; }
         
+        /* Fixed Center Branding Container - Enforces identical structural boundaries */
         .center-branding { text-align: center; flex: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        .center-branding h1 { margin: 0; font-size: 2.4em; font-weight: normal; letter-spacing: 2px; color: #c5a059; line-height: 1; }
         
-        /* Letter spacing matches the span width of LawNat text block perfectly */
-        .center-branding .motto { margin: 6px 0 0 0; color: #fff; font-style: italic; font-size: 0.85em; letter-spacing: 5px; text-transform: uppercase; text-align: center; width: 100%; display: block; padding-left: 5px; box-sizing: border-box; }
+        /* Locked text block wrapper ensuring text width bounds stay perfectly matched */
+        .text-lock-box { display: inline-flex; flex-direction: column; align-items: center; width: auto; max-width: 100%; }
+        .text-lock-box h1 { margin: 0; font-size: 2.5em; font-weight: normal; letter-spacing: 1px; color: #c5a059; line-height: 1; text-align: center; }
+        
+        /* Re-calibrated structural letter spacing to align Serving Justice perfectly beneath LawNat text edges */
+        .text-lock-box .motto { margin: 6px 0 0 0; color: #fff; font-style: italic; font-size: 0.85em; letter-spacing: 2.2px; text-transform: uppercase; text-align: center; width: 100%; display: block; padding-left: 2.2px; box-sizing: border-box; border-top: 1px solid rgba(197, 160, 89, 0.3); padding-top: 4px; }
         
         .right-credentials { text-align: right; flex: 1; }
         .right-credentials .lawyer-name { font-size: 1.3em; color: #fff; font-weight: normal; margin: 0; line-height: 1.1; }
@@ -92,7 +96,13 @@
     <!-- Header Panel -->
     <header>
         <div class="logo-container"><img src="logo.png" alt="LawNat Logo" onerror="this.style.display='none'"></div>
-        <div class="center-branding"><h1>LawNat</h1><div class="motto">Serving Justice</div></div>
+        <div class="center-branding">
+            <!-- Hardware Lock Box ensures both elements share an identical visual footprint width -->
+            <div class="text-lock-box">
+                <h1>LawNat</h1>
+                <div class="motto">Serving Justice</div>
+            </div>
+        </div>
         <div class="right-credentials"><div class="lawyer-name">Manoj Kumar Tiwari</div><div class="advocate-title">Advocate</div><div class="degrees">B.Sc., DCA, LL.B</div></div>
     </header>
 
