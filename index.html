@@ -6,34 +6,34 @@
     <title>LawNat | Manoj Kumar Tiwari, Advocate</title>
     <style>
         /* Absolute reset to strip out stuck browser constraints */
-        html, body { margin: 0; padding: 0; background-color: #fcfcfc; font-family: 'Georgia', serif; color: #222; line-height: 1.6; height: auto !important; overflow: visible !important; }
+        html, body { margin: 0; padding: 0; background-color: #fcfcfc; font-family: 'Georgia', serif; color: #222; line-height: 1.6; }
         
-        /* Shrunken, Compact Header Layout */
-        header { background-color: #0f1e36; color: #fff; padding: 12px 30px; border-bottom: 4px solid #c5a059; display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; }
-        .logo-container { display: flex; align-items: center; }
-        .logo-container img { max-height: 75px; width: auto; border: none; display: block; padding: 0; margin: 0; }
+        /* Shrunken, Compact Header Layout matching your screenshots */
+        header { background-color: #0f1e36; color: #fff; padding: 15px 40px; border-bottom: 4px solid #c5a059; display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; }
+        .logo-container { flex: 1; display: flex; justify-content: flex-start; }
+        .logo-container img { max-height: 75px; width: auto; border: none; display: block; }
 
-        .center-branding { text-align: center; flex-grow: 1; padding: 0 10px; }
-        .center-branding h1 { margin: 0; font-size: 2.1em; font-weight: normal; letter-spacing: 2px; color: #c5a059; line-height: 1; }
-        .center-branding .motto { margin: 2px 0 0 0; color: #fff; font-style: italic; font-size: 0.95em; letter-spacing: 1px; }
+        .center-branding { flex: 2; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .center-branding h1 { margin: 0; font-size: 2.3em; font-weight: normal; letter-spacing: 2px; color: #c5a059; line-height: 1; }
+        .center-branding .motto { margin: 4px 0 0 0; color: #fff; font-style: italic; font-size: 0.95em; letter-spacing: 1px; }
 
-        .right-credentials { text-align: right; }
-        .right-credentials .lawyer-name { font-size: 1.25em; color: #fff; font-weight: normal; line-height: 1.1; }
-        .right-credentials .advocate-title { font-size: 0.95em; color: #c5a059; margin-top: 2px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; }
+        .right-credentials { flex: 1; text-align: right; display: flex; flex-direction: column; justify-content: center; }
+        .right-credentials .lawyer-name { font-size: 1.3em; color: #fff; font-weight: normal; line-height: 1.1; }
+        .right-credentials .advocate-title { font-size: 0.95em; color: #c5a059; margin-top: 3px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; }
         .right-credentials .degrees { color: #aaa; font-size: 0.85em; margin-top: 1px; font-style: italic; }
 
         /* Interactive Navigation Bar */
         .tab-navigation { background-color: #0c182b; display: flex; justify-content: center; border-bottom: 2px solid #e0e0e0; overflow-x: auto; }
-        .tab-btn { background: none; border: none; color: #aaa; padding: 12px 20px; font-family: 'Georgia', serif; font-size: 0.9em; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
+        .tab-btn { background: none; border: none; color: #aaa; padding: 15px 25px; font-family: 'Georgia', serif; font-size: 0.9em; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
         .tab-btn:hover { color: #fff; }
         .tab-btn.active-tab { color: #c5a059; font-weight: bold; border-bottom: 3px solid #c5a059; background-color: rgba(255,255,255,0.05); }
 
-        .container { max-width: 900px; margin: 20px auto 40px auto; padding: 0 20px; box-sizing: border-box; }
+        .container { max-width: 900px; margin: 30px auto 60px auto; padding: 0 20px; box-sizing: border-box; }
         h2 { border-bottom: 2px solid #0f1e36; padding-bottom: 6px; color: #0f1e36; font-size: 1.4em; margin-top: 20px; }
         
-        /* Absolute display parameters for view windows */
-        .tab-window { display: none !important; visibility: hidden !important; }
-        .tab-window.active-window { display: block !important; visibility: visible !important; }
+        /* Fixed Panel Visibility Framework Rules */
+        .tab-window { display: none; }
+        .tab-window.active-window { display: block !important; }
 
         .jurisdictions-list { background: #f4f6f9; padding: 15px; border-left: 5px solid #c5a059; margin-top: 15px; font-size: 1em; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
@@ -50,7 +50,7 @@
         .contact-card p { margin: 6px 0; font-size: 0.9em; }
         .contact-card a { color: #c5a059; text-decoration: none; font-weight: bold; }
         
-        footer { text-align: center; padding: 20px; color: #666; font-size: 0.8em; border-top: 1px solid #e0e0e0; background-color: #f7f9fa; margin-top: 40px; }
+        footer { text-align: center; padding: 20px; color: #666; font-size: 0.8em; border-top: 1px solid #e0e0e0; background-color: #f7f9fa; margin-top: 60px; }
 
         /* Compliance pop-up layers */
         .bci-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 30, 54, 0.98); display: flex; align-items: center; justify-content: center; z-index: 10000; padding: 20px; box-sizing: border-box; }
@@ -71,6 +71,7 @@
 </head>
 <body>
 
+    <!-- BCI Compliance Disclaimer Pop-up Window -->
     <div id="bciModal" class="bci-modal-overlay">
         <div class="bci-modal-content">
             <h3>Bar Council of India Compliance Declaration</h3>
@@ -88,6 +89,7 @@
         </div>
     </div>
 
+    <!-- Master Three-Column Structural Header -->
     <header>
         <div class="logo-container">
             <img src="logo.png" alt="LawNat Logo" onerror="this.style.display='none'">
@@ -103,6 +105,7 @@
         </div>
     </header>
 
+    <!-- Tabbed Navigation controls -->
     <div class="tab-navigation">
         <button type="button" class="tab-btn active-tab" id="btn-about" onclick="switchTab('aboutWindow', 'btn-about')">Profile</button>
         <button type="button" class="tab-btn" id="btn-expertise" onclick="switchTab('expertiseWindow', 'btn-expertise')">Practice Dimensions</button>
@@ -110,6 +113,7 @@
         <button type="button" class="tab-btn" id="btn-contact" onclick="switchTab('contactWindow', 'btn-contact')">Directory & Office</button>
     </div>
 
+    <!-- Active Window Panels Content Container -->
     <div class="container">
         
         <!-- PANEL 1: PROFILE -->
@@ -126,7 +130,3 @@
 
         <!-- PANEL 2: PRACTICE DIMENSIONS -->
         <div id="expertiseWindow" class="tab-window">
-            <h2>Dimensions of Practice</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Public International Law</h3>
