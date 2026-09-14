@@ -17,10 +17,12 @@
         
         /* Locked text block wrapper with Verdana font bindings */
         .text-lock-box { display: inline-flex; flex-direction: column; align-items: center; width: 165px; max-width: 100%; font-family: 'Verdana', sans-serif; }
-        .text-lock-box h1 { margin: 0; font-size: 2.2em; font-weight: bold; letter-spacing: -0.5px; color: #c5a059; line-height: 1; text-align: center; width: 100%; }
         
-        /* Motto forced to standard casing, Verdana font family, and zeroed slant styles */
-        .text-lock-box .motto { font-family: 'Verdana', sans-serif; font-style: normal; margin: 7px 0 0 0; color: #c5a059; font-size: 0.72em; letter-spacing: 0.6px; text-transform: uppercase; text-align: center; width: 100%; display: block; box-sizing: border-box; border-top: 1px solid rgba(197, 160, 89, 0.3); padding-top: 5px; white-space: nowrap; font-weight: normal; }
+        /* Stripped all bold weights and forced uppercase transforms off to respect manual title casing */
+        .text-lock-box h1 { margin: 0; font-size: 2.2em; font-weight: normal; letter-spacing: -0.5px; color: #c5a059; line-height: 1; text-align: center; width: 100%; text-transform: none; }
+        
+        /* Motto set to normal weight, original title casing, and Verdana font styles */
+        .text-lock-box .motto { font-family: 'Verdana', sans-serif; font-style: italic; font-weight: normal; margin: 7px 0 0 0; color: #c5a059; font-size: 0.78em; letter-spacing: 0.5px; text-align: center; width: 100%; display: block; box-sizing: border-box; border-top: 1px solid rgba(197, 160, 89, 0.3); padding-top: 5px; white-space: nowrap; text-transform: none; }
         
         .right-credentials { text-align: right; flex: 1; }
         /* Capitalized, Bold Gold Casing Framework for Name and Title layers */
@@ -131,44 +133,20 @@
         <div id="expertiseWindow" class="tab-window">
             <h2>Dimensions of Practice</h2>
             <div class="grid">
-                <div class="card">
-                    <h3>Public International Law</h3>
-                    <p>Providing expert legal scrutiny involving the application of multilateral treaties, state responsibility frameworks, state immunity doctrines, and diplomatic convention dynamics before domestic courts and international forums.</p>
-                </div>
-                <div class="card">
-                    <h3>International Refugee & Asylum Law</h3>
-                    <p>Rigorous handling of compliance frameworks governed by the 1951 Refugee Convention, custom evaluations regarding UNHCR mandate protections, human rights enforcement architectures, and the absolute invocation of the customary international principle of <em>non-refoulement</em>.</p>
-                </div>
-                <div class="card">
-                    <h3>Appellate Litigation</h3>
-                    <p>Drafting structured Special Leave Petitions (SLPs), high appellate filings, statutory appeals, and comprehensive writs under Constitutional frameworks.</p>
-                </div>
-                <div class="card">
-                    <h3>Corporate & Insolvency Jurisprudence</h3>
-                    <p>Navigating systemic corporate asset resolution practices under the Insolvency and Bankruptcy Code (IBC), alongside managing company petition actions before the NCLT and NCLAT.</p>
-                </div>
-                <div class="card">
-                    <h3>Consumer Dispute Resolution</h3>
-                    <p>Handling premium advocacy, consumer fraud liability audits, and multi-tier claims before District, State, and National Consumer Commissions (NCDRC).</p>
-                </div>
-                <div class="card">
-                    <h3>Civil, Criminal & Statutory Drafting</h3>
-                    <p>Precision execution of legal notices, statement of claims, commercial contracts, bail applications, and trial advocacy metrics within Sessions Courts.</p>
-                </div>
+                <div class="card"><h3>Public International Law</h3><p>Providing expert legal scrutiny involving the application of multilateral treaties, state responsibility frameworks, state immunity doctrines, and diplomatic convention dynamics before domestic courts and international forums.</p></div>
+                <div class="card"><h3>International Refugee & Asylum Law</h3><p>Rigorous handling of compliance frameworks governed by the 1951 Refugee Convention, custom evaluations regarding UNHCR mandate protections, human rights enforcement architectures, and the absolute invocation of the customary international principle of <em>non-refoulement</em>.</p></div>
+                <div class="card"><h3>Appellate Litigation</h3><p>Drafting structured Special Leave Petitions (SLPs), high appellate filings, statutory appeals, and comprehensive writs under Constitutional frameworks.</p></div>
+                <div class="card"><h3>Corporate & Insolvency Jurisprudence</h3><p>Navigating systemic corporate asset resolution practices under the Insolvency and Bankruptcy Code (IBC), alongside managing company petition actions before the NCLT and NCLAT.</p></div>
+                <div class="card"><h3>Consumer Dispute Resolution</h3><p>Handling premium advocacy, consumer fraud liability audits, and multi-tier claims before District, State, and National Consumer Commissions (NCDRC).</p></div>
+                <div class="card"><h3>Civil, Criminal & Statutory Drafting</h3><p>Precision execution of legal notices, statement of claims, commercial contracts, bail applications, and trial advocacy metrics within Sessions Courts.</p></div>
             </div>
         </div>
 
         <!-- TAB 3: ACADEMIC SECTION -->
         <div id="academicWindow" class="tab-window">
             <h2>Academic Section & Legal Write-Ups</h2>
-            <div class="post-preview">
-                <h3>International Refugee Law and the Principle of Non-Refoulement</h3>
-                <p>An in-depth analysis parsing the intersection between domestic constitutional protections under Article 21 and customary international obligations regarding refugee protection. Exploring how higher courts apply international human rights treaties in the absence of explicit domestic refugee legislation...</p>
-            </div>
-            <div class="post-preview">
-                <h3>Procedural Precedents in Commercial Insolvency</h3>
-                <p>Evaluating recent judicial benchmarks handed down regarding strict timeline limits for corporate insolvency resolution processes, asset preservation rules, and the changing criteria for appellate review under corporate law tribunals...</p>
-            </div>
+            <div class="post-preview"><h3>International Refugee Law and the Principle of Non-Refoulement</h3><p>An in-depth analysis parsing the intersection between domestic constitutional protections under Article 21 and customary international obligations regarding refugee protection. Exploring how higher courts apply international human rights treaties in the absence of explicit domestic refugee legislation...</p></div>
+            <div class="post-preview"><h3>Procedural Precedents in Commercial Insolvency</h3><p>Evaluating recent judicial benchmarks handed down regarding strict timeline limits for corporate insolvency resolution processes, asset preservation rules, and the changing criteria for appellate review under corporate law tribunals...</p></div>
         </div>
 
         <!-- TAB 4: DIRECTORY & OFFICE -->
