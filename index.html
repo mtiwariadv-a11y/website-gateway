@@ -15,16 +15,18 @@
         .center-branding { text-align: center; flex: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; }
         
         /* Locked text block wrapper ensuring text width bounds stay perfectly matched */
-        .text-lock-box { display: inline-flex; flex-direction: column; align-items: center; width: 160px; max-width: 100%; }
-        .text-lock-box h1 { margin: 0; font-size: 2.5em; font-weight: normal; letter-spacing: 1px; color: #c5a059; line-height: 1; text-align: center; width: 100%; }
+        .text-lock-box { display: inline-flex; flex-direction: column; align-items: center; width: 145px; max-width: 100%; }
+        .text-lock-box h1 { margin: 0; font-size: 2.5em; font-weight: normal; letter-spacing: 0px; color: #c5a059; line-height: 1; text-align: center; width: 100%; }
         
-        /* STRIPPED ALL CAPS TRANSLATIONS - Enforces original title casing layout */
-        .text-lock-box .motto { margin: 6px 0 0 0; color: #fff; font-style: italic; font-size: 0.95em; letter-spacing: 0.5px; text-align: center; width: 100%; display: block; box-sizing: border-box; border-top: 1px solid rgba(197, 160, 89, 0.3); padding-top: 4px; white-space: nowrap; }
+        /* Micro-calibrated letter-spacing to stretch 'Serving Justice' to match LawNat width exactly */
+        .text-lock-box .motto { margin: 5px 0 0 0; color: #c5a059; font-style: italic; font-size: 0.82em; letter-spacing: 0.4px; text-align: center; width: 100%; display: block; box-sizing: border-box; padding-top: 2px; white-space: nowrap; }
         
         .right-credentials { text-align: right; flex: 1; }
-        .right-credentials .lawyer-name { font-size: 1.3em; color: #fff; font-weight: normal; margin: 0; line-height: 1.1; }
+        /* Transformed Name and Advocate elements to Golden */
+        .right-credentials .lawyer-name { font-size: 1.3em; color: #c5a059; font-weight: normal; margin: 0; line-height: 1.1; }
         .right-credentials .advocate-title { font-size: 1em; color: #c5a059; font-weight: bold; text-transform: uppercase; margin: 2px 0 0 0; letter-spacing: 1px; }
-        .right-credentials .degrees { color: #aaa; font-size: 0.9em; font-style: italic; margin: 1px 0 0 0; }
+        /* Transformed degrees to Bold White */
+        .right-credentials .degrees { color: #ffffff; font-size: 0.9em; font-weight: bold; font-style: normal; margin: 1px 0 0 0; }
         
         .tab-navigation { background-color: #0c182b; display: flex; justify-content: center; border-bottom: 2px solid #e0e0e0; }
         .tab-label { color: #aaa; padding: 15px 25px; font-size: 0.95em; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s; }
