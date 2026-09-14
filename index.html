@@ -5,69 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LawNat | Manoj Kumar Tiwari, Advocate</title>
     <style>
-        body { font-family: 'Georgia', serif; color: #222; line-height: 1.6; margin: 0; padding: 0; background-color: #fcfcfc; }
-        header { background-color: #0f1e36; color: #fff; padding: 25px 40px; border-bottom: 4px solid #c5a059; display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; }
+        body { font-family: 'Georgia', serif; color: #222; line-height: 1.6; margin: 0; padding: 0; background-color: #fcfcfc; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        /* Premium Three-Column Balanced Header Layout */
+        header { background-color: #0f1e36; color: #fff; padding: 25px 40px; border-bottom: 4px solid #c5a059; display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; flex-shrink: 0; }
         .logo-container { flex: 1; display: flex; justify-content: flex-start; }
         .logo-container img { max-width: 130px; height: auto; border: none; display: block; }
+
         .center-branding { flex: 2; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
         .center-branding h1 { margin: 0; font-size: 2.6em; font-weight: normal; letter-spacing: 3px; color: #c5a059; line-height: 1.1; }
         .center-branding .motto { margin: 3px 0 0 0; color: #fff; font-style: italic; font-size: 1.05em; letter-spacing: 1px; }
+
         .right-credentials { flex: 1; text-align: right; display: flex; flex-direction: column; justify-content: center; }
         .right-credentials .lawyer-name { font-size: 1.4em; color: #fff; font-weight: normal; line-height: 1.2; }
         .right-credentials .advocate-title { font-size: 1.1em; color: #c5a059; margin-top: 2px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; }
         .right-credentials .degrees { color: #aaa; font-size: 0.95em; margin-top: 1px; font-style: italic; }
-        .tab-navigation { background-color: #0c182b; display: flex; justify-content: center; border-bottom: 2px solid #e0e0e0; overflow-x: auto; }
+
+        /* Interactive Horizontal Navigation Menu */
+        .tab-navigation { background-color: #0c182b; display: flex; justify-content: center; border-bottom: 2px solid #e0e0e0; overflow-x: auto; flex-shrink: 0; }
         .tab-btn { background: none; border: none; color: #aaa; padding: 15px 25px; font-family: 'Georgia', serif; font-size: 0.95em; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
         .tab-btn:hover { color: #fff; }
         .tab-btn.active-tab { color: #c5a059; font-weight: bold; border-bottom: 3px solid #c5a059; background-color: rgba(255,255,255,0.05); }
-        .container { max-width: 900px; margin: 20px auto 40px auto; padding: 0 20px; box-sizing: border-box; }
+
+        .container { max-width: 900px; margin: 20px auto 40px auto; padding: 0 20px; box-sizing: border-box; flex: 1 0 auto; width: 100%; }
         h2 { border-bottom: 2px solid #0f1e36; padding-bottom: 8px; color: #0f1e36; font-size: 1.5em; margin-top: 20px; }
+        
+        /* Functional Layout Panels visibility rules */
         .tab-window { display: none; }
         .tab-window.active-window { display: block !important; }
+
         .jurisdictions-list { background: #f4f6f9; padding: 20px; border-left: 5px solid #c5a059; margin-top: 20px; font-size: 1.05em; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
         .card { background: #fff; padding: 20px; border: 1px solid #e0e0e0; border-top: 4px solid #0f1e36; }
+        .card h3 { margin-top: 0; color: #0f1e36; font-size: 1.2em; }
+        
         .post-preview { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        .post-preview h3 { margin-bottom: 5px; color: #0f1e36; }
+        .post-date { font-size: 0.85em; color: #666; font-style: italic; }
+        
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
         .contact-card { background-color: #0f1e36; color: #fff; padding: 25px; border-radius: 4px; border-top: 4px solid #c5a059; }
+        .contact-card h3 { color: #c5a059; margin-top: 0; border-bottom: 1px solid #334460; padding-bottom: 5px; font-size: 1.1em; }
+        .contact-card p { margin: 8px 0; font-size: 0.95em; }
+        .contact-card a { color: #c5a059; text-decoration: none; font-weight: bold; }
+        
+        footer { text-align: center; padding: 25px; color: #666; font-size: 0.85em; border-top: 1px solid #e0e0e0; background-color: #f7f9fa; margin-top: auto; width: 100%; box-sizing: border-box; flex-shrink: 0; }
+
+        /* BCI Compliance Pop-up Modal Styling */
         .bci-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 30, 54, 0.98); display: flex; align-items: center; justify-content: center; z-index: 10000; padding: 20px; box-sizing: border-box; }
         .bci-modal-content { background: #fff; max-width: 650px; width: 100%; padding: 35px; border-radius: 6px; border-top: 6px solid #c5a059; box-shadow: 0 10px 30px rgba(0,0,0,0.3); font-size: 0.95em; color: #333; }
-        .bci-btn { background-color: #0f1e36; color: #fff; border: 2px solid #0f1e36; padding: 12px 35px; font-family: 'Georgia', serif; font-size: 1em; cursor: pointer; border-radius: 4px; text-transform: uppercase; }
+        .bci-modal-content h3 { margin-top: 0; color: #0f1e36; text-transform: uppercase; letter-spacing: 1px; font-size: 1.2em; border-bottom: 2px solid #f4f6f9; padding-bottom: 10px; }
+        .bci-modal-content ul { margin: 15px 0; padding-left: 20px; }
+        .bci-modal-content li { margin-bottom: 10px; }
+        .bci-btn-container { text-align: center; margin-top: 25px; }
+        .bci-btn { background-color: #0f1e36; color: #fff; border: 2px solid #0f1e36; padding: 12px 35px; font-family: 'Georgia', serif; font-size: 1em; cursor: pointer; transition: all 0.3s ease; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; display: inline-block; }
+        .bci-btn:hover { background-color: #c5a059; border-color: #c5a059; color: #0f1e36; font-weight: bold; }
+        
         .hidden-layout { display: none !important; }
+
+        @media(max-width: 768px) { 
+            header { flex-direction: column; text-align: center; padding: 20px; gap: 15px; }
+            .logo-container, .right-credentials { justify-content: center; text-align: center; }
+            .grid, .contact-grid { grid-template-columns: 1fr; } 
+        }
     </style>
 </head>
 <body>
+
+    <!-- BCI Compliance Disclaimer Pop-up Window -->
     <div id="bciModal" class="bci-modal-overlay">
         <div class="bci-modal-content">
             <h3>Bar Council of India Compliance Declaration</h3>
-            <p>Under statutory rules of the Bar Council of India, advocates are prohibited from soliciting work or advertising. Click below to acknowledge this informational portal.</p>
-            <button type="button" class="bci-btn" onclick="document.getElementById('bciModal').className='hidden-layout';">I Agree</button>
+            <p>Under the statutory rules of the Bar Council of India (specifically Rule 36 of Section IV, Chapter II, Part VI), advocates are prohibited from soliciting work or advertising their professional services in any form.</p>
+            <p>By clicking <strong>"I AGREE"</strong> below, the user explicitly acknowledges and confirms the following protocols:</p>
+            <ul>
+                <li>The user is seeking information regarding LawNat and Manoj Kumar Tiwari, Advocate, entirely out of their own volition and for informational or academic purposes.</li>
+                <li>There has been no form of advertisement, personal communication, solicitation, invitation, or inducement of any sort whatsoever from this office or its members to solicit work through this platform.</li>
+                <li>The materials provided on this website are educational assets and do not constitute legal advice, strategic counseling, or create a formal advocate-client relationship.</li>
+            </ul>
+            <p style="font-style: italic; margin-top: 15px; font-size: 0.9em; color: #666;">All particulars published within this terminal are true, factual, and strictly aligned with the permitted Schedule under Rule 36 rules.</p>
+            <div class="bci-btn-container">
+                <button type="button" class="bci-btn" onclick="document.getElementById('bciModal').className='hidden-layout';">I Agree</button>
+            </div>
         </div>
     </div>
+
+    <!-- Master Three-Column Structural Header -->
     <header>
-        <div class="center-branding"><h1>LawNat</h1><div class="motto">Serving Justice</div></div>
-        <div class="right-credentials"><div class="lawyer-name">Manoj Kumar Tiwari</div><div class="advocate-title">Advocate</div></div>
+        <div class="logo-container">
+            <img src="logo.png" alt="LawNat Logo" onerror="this.style.display='none'">
+        </div>
+        <div class="center-branding">
+            <h1>LawNat</h1>
+            <div class="motto">Serving Justice</div>
+        </div>
+        <div class="right-credentials">
+            <div class="lawyer-name">Manoj Kumar Tiwari</div>
+            <div class="advocate-title">Advocate</div>
+            <div class="degrees">B.Sc., DCA, LL.B</div>
+        </div>
     </header>
+
+    <!-- Tabbed Navigation controls -->
     <div class="tab-navigation">
         <button type="button" class="tab-btn active-tab" id="btn-about" onclick="switchTab('aboutWindow', 'btn-about')">Profile</button>
-        <button type="button" class="tab-btn" id="btn-expertise" onclick="switchTab('expertiseWindow', 'btn-expertise')">Practice</button>
-        <button type="button" class="tab-btn" id="btn-insights" onclick="switchTab('insightsWindow', 'btn-insights')">Insights</button>
-        <button type="button" class="tab-btn" id="btn-contact" onclick="switchTab('contactWindow', 'btn-contact')">Contact</button>
+        <button type="button" class="tab-btn" id="btn-expertise" onclick="switchTab('expertiseWindow', 'btn-expertise')">Practice Dimensions</button>
+        <button type="button" class="tab-btn" id="btn-insights" onclick="switchTab('insightsWindow', 'btn-insights')">Academic Section</button>
+        <button type="button" class="tab-btn" id="btn-contact" onclick="switchTab('contactWindow', 'btn-contact')">Directory & Office</button>
     </div>
+
+    <!-- Active Window Panels Content Container -->
     <div class="container">
-        <div id="aboutWindow" class="tab-window active-window"><h2>Profile</h2><p>Welcome to LawNat by Manoj Kumar Tiwari, Advocate, New Delhi.</p></div>
-        <div id="expertiseWindow" class="tab-window"><h2>Practice</h2><p>Public International Law, Appellate Litigation, and more.</p></div>
-        <div id="insightsWindow" class="tab-window"><h2>Insights</h2><p>Academic commentaries and briefs.</p></div>
-        <div id="contactWindow" class="tab-window"><h2>Contact</h2><p>Chamber 86, Supreme Court of India, New Delhi.</p></div>
-    </div>
-    <script>
-        function switchTab(wId, bId) {
-            Array.from(document.getElementsByClassName("tab-window")).forEach(el => { el.style.display = "none"; el.classList.remove("active-window"); });
-            Array.from(document.getElementsByClassName("tab-btn")).forEach(el => el.classList.remove("active-tab"));
-            document.getElementById(wId).style.display = "block";
-            document.getElementById(wId).classList.add("active-window");
-            document.getElementById(bId).classList.add("active-tab");
-        }
-    </script>
-</body>
-</html>
+        
+        <!-- WINDOW 1: PROFILE INTERFACE -->
+        <div id="aboutWindow" class="tab-window active-window">
+            <h2>Professional Profile</h2>
+            <p>Welcome to LawNat. Founded and maintained by Manoj Kumar Tiwari, Advocate, this portal operates as a premium research directory and professional legal repository. Anchored in New Delhi, the practice leverages about 17 years of extensive legal practice experience to deliver precise statutory interpretation, complex appellate briefing configurations, and thorough academic tracking across volatile domestic and multilateral legal spaces.</p>
+            
+            <h2>Jurisdictions & Practice Venues</h2>
+            <p>Handling formal documentation, legal research, and corporate/appellate filings across the following judicial organs in India:</p>
+            <div class="jurisdictions-list">
