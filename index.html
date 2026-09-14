@@ -9,12 +9,12 @@
         
         /* Premium Three-Column Header Layout with Top Accent Line Framing */
         header { background-color: #0f1e36; color: #fff; padding: 15px 40px; border-top: 4px solid #c5a059; border-bottom: 4px solid #c5a059; display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; }
-        .logo-container img { max-width: 110px; height: auto; display: block; border: none; }
+        .logo-container img { max-height: 70px; width: auto; display: block; }
         
         .center-branding { text-align: center; flex: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; }
         .center-branding h1 { margin: 0; font-size: 2.4em; font-weight: normal; letter-spacing: 2px; color: #c5a059; line-height: 1; }
         
-        /* Letter spacing matches the span width of LawNat text block perfectly */
+        /* Stretches Serving Justice to perfectly equalize with the visual span width of LawNat */
         .center-branding .motto { margin: 6px 0 0 0; color: #fff; font-style: italic; font-size: 0.85em; letter-spacing: 5px; text-transform: uppercase; text-align: center; width: 100%; display: block; padding-left: 5px; box-sizing: border-box; }
         
         .right-credentials { text-align: right; flex: 1; }
@@ -32,7 +32,7 @@
         
         input[type="radio"] { display: none; }
         
-        /* Direct Layout Switching Mechanics */
+        /* Premium CSS Logical Matrix Switches for Tab Interactions */
         #tab1:checked ~ .tab-navigation #lbl1, #tab2:checked ~ .tab-navigation #lbl2, #tab3:checked ~ .tab-navigation #lbl3, #tab4:checked ~ .tab-navigation #lbl4 { color: #c5a059; font-weight: bold; border-bottom: 3px solid #c5a059; background: rgba(255,255,255,0.05); }
         #tab1:checked ~ .container #aboutWindow, #tab2:checked ~ .container #expertiseWindow, #tab3:checked ~ .container #academicWindow, #tab4:checked ~ .container #contactWindow { display: block !important; }
 
@@ -42,6 +42,7 @@
         .card h3 { margin-top: 0; color: #0f1e36; }
         .post-preview { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
         
+        /* Premium Side-by-Side Three-Column Address Card Grid Layout */
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 20px; }
         .contact-card { background-color: #0f1e36; color: #fff; padding: 22px; border-radius: 4px; border-top: 4px solid #c5a059; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; }
         .contact-card h3 { color: #c5a059; margin-top: 0; border-bottom: 1px solid #334460; padding-bottom: 6px; font-size: 1.1em; }
@@ -71,14 +72,7 @@
     <div id="bciModal" class="bci-modal-overlay">
         <div class="bci-modal-content">
             <h3>Bar Council of India Compliance Declaration</h3>
-            <p>Under statutory rules of the Bar Council of India (specifically Rule 36 of Section IV, Chapter II, Part VI), advocates are prohibited from soliciting work or advertising their professional services in any form.</p>
-            <p>By clicking <strong>"I AGREE"</strong> below, the user explicitly acknowledges and confirms the following protocols:</p>
-            <ul>
-                <li>The user is seeking information regarding LawNat and Manoj Kumar Tiwari, Advocate, entirely out of their own volition and for informational or academic purposes.</li>
-                <li>There has been no form of advertisement, personal communication, solicitation, invitation, or inducement of any sort whatsoever from this office or its members to solicit work through this platform.</li>
-                <li>The materials provided on this website are educational assets and do not constitute legal advice, strategic counseling, or create a formal advocate-client relationship.</li>
-            </ul>
-            <p style="font-style: italic; margin-top: 15px; font-size: 0.9em; color: #666;">All particulars published within this terminal are true, factual, and strictly aligned with the permitted Schedule under Rule 36 rules.</p>
+            <p>Under statutory rules of the Bar Council of India, advocates are prohibited from soliciting work or advertising. This portal serves purely as an educational and informational directory mapping credentials and write-ups.</p>
             <div style="text-align: center; margin-top: 25px;"><button type="button" class="bci-btn" onclick="document.getElementById('bciModal').style.display='none';">I Agree</button></div>
         </div>
     </div>
@@ -109,14 +103,13 @@
             <h2>Professional Profile</h2>
             <p>Welcome to LawNat. Founded and maintained by Manoj Kumar Tiwari, Advocate, this portal operates as a premium research directory and professional legal repository. Anchored in New Delhi, the practice leverages about 17 years of extensive legal practice experience to deliver precise statutory interpretation, complex appellate briefing configurations, and thorough academic tracking across volatile domestic and multilateral legal spaces.</p>
             <h2>Jurisdictions & Practice Venues</h2>
-            <div class="jurisdictions-list">
-                <strong>Supreme Court of India</strong> • High Court of Delhi & State High Courts • National Company Law Tribunal (NCLT) • National Company Law Appellate Tribunal (NCLAT) • National Consumer Disputes Redressal Commission (NCDRC) • National Green Tribunal (NGT) • District & Sessions Courts
-            </div>
+            <div class="jurisdictions-list"><strong>Supreme Court of India</strong> • High Court of Delhi & State High Courts • National Company Law Tribunal (NCLT) • National Company Law Appellate Tribunal (NCLAT) • National Consumer Disputes Redressal Commission (NCDRC) • National Green Tribunal (NGT) • District & Sessions Courts</div>
         </div>
 
         <!-- TAB 2: PRACTICE DIMENSIONS -->
         <div id="expertiseWindow" class="tab-window">
             <h2>Dimensions of Practice</h2>
             <div class="grid">
-                <div class="card">
-                    <h3>Public International Law</h3>
+                <div class="card"><h3>Public International Law</h3><p>Providing expert legal scrutiny involving the application of multilateral treaties, state responsibility frameworks, state immunity doctrines, and diplomatic convention dynamics before domestic courts and international forums.</p></div>
+                <div class="card"><h3>International Refugee & Asylum Law</h3><p>Rigorous handling of compliance frameworks governed by the 1951 Refugee Convention, custom evaluations regarding UNHCR mandate protections, human rights enforcement architectures, and the absolute invocation of the customary international principle of <em>non-refoulement</em>.</p></div>
+                <div class="card"><h3>Appellate Litigation</h3><p>Drafting structured Special Leave Petitions (SLPs), high appellate filings, statutory appeals, and comprehensive writs under Constitutional frameworks.</p></div>
