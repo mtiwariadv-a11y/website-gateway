@@ -6,84 +6,117 @@
     <title>LawNat | Manoj Kumar Tiwari, Advocate</title>
     <style>
         body { font-family: 'Georgia', serif; color: #222; line-height: 1.6; margin: 0; padding: 0; background-color: #fcfcfc; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        /* Premium Three-Column Header Layout with Top Accent Line Framing */
         header { background-color: #0f1e36; color: #fff; padding: 15px 40px; border-top: 4px solid #c5a059; border-bottom: 4px solid #c5a059; display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; }
-        .logo-container img { max-height: 70px; width: auto; display: block; }
+        .logo-container img { max-width: 110px; height: auto; display: block; border: none; }
+        
         .center-branding { text-align: center; flex: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; }
         .center-branding h1 { margin: 0; font-size: 2.4em; font-weight: normal; letter-spacing: 2px; color: #c5a059; line-height: 1; }
-        .center-branding .motto { margin: 6px 0 0 0; color: #fff; font-style: italic; font-size: 0.85em; letter-spacing: 4.8px; text-transform: uppercase; text-align: center; width: 100%; display: block; padding-left: 4.8px; box-sizing: border-box; }
+        
+        /* Letter spacing matches the span width of LawNat text block perfectly */
+        .center-branding .motto { margin: 6px 0 0 0; color: #fff; font-style: italic; font-size: 0.85em; letter-spacing: 5px; text-transform: uppercase; text-align: center; width: 100%; display: block; padding-left: 5px; box-sizing: border-box; }
+        
         .right-credentials { text-align: right; flex: 1; }
         .right-credentials .lawyer-name { font-size: 1.3em; color: #fff; font-weight: normal; margin: 0; line-height: 1.1; }
         .right-credentials .advocate-title { font-size: 1em; color: #c5a059; font-weight: bold; text-transform: uppercase; margin: 2px 0 0 0; letter-spacing: 1px; }
         .right-credentials .degrees { color: #aaa; font-size: 0.9em; font-style: italic; margin: 1px 0 0 0; }
+        
         .tab-navigation { background-color: #0c182b; display: flex; justify-content: center; border-bottom: 2px solid #e0e0e0; }
         .tab-label { color: #aaa; padding: 15px 25px; font-size: 0.95em; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s; }
         .tab-label:hover { color: #fff; }
+        
         .container { max-width: 950px; margin: 20px auto 40px auto; padding: 0 20px; box-sizing: border-box; flex: 1 0 auto; width: 100%; }
         h2 { border-bottom: 2px solid #0f1e36; padding-bottom: 8px; color: #0f1e36; font-size: 1.5em; }
         .tab-window { display: none; }
+        
         input[type="radio"] { display: none; }
+        
+        /* Direct Layout Switching Mechanics */
         #tab1:checked ~ .tab-navigation #lbl1, #tab2:checked ~ .tab-navigation #lbl2, #tab3:checked ~ .tab-navigation #lbl3, #tab4:checked ~ .tab-navigation #lbl4 { color: #c5a059; font-weight: bold; border-bottom: 3px solid #c5a059; background: rgba(255,255,255,0.05); }
         #tab1:checked ~ .container #aboutWindow, #tab2:checked ~ .container #expertiseWindow, #tab3:checked ~ .container #academicWindow, #tab4:checked ~ .container #contactWindow { display: block !important; }
+
         .jurisdictions-list { background: #f4f6f9; padding: 20px; border-left: 5px solid #c5a059; margin-top: 20px; font-size: 1.05em; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
         .card { background: #fff; padding: 20px; border: 1px solid #e0e0e0; border-top: 4px solid #0f1e36; box-sizing: border-box; }
         .card h3 { margin-top: 0; color: #0f1e36; }
         .post-preview { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
+        
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 20px; }
         .contact-card { background-color: #0f1e36; color: #fff; padding: 22px; border-radius: 4px; border-top: 4px solid #c5a059; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; }
         .contact-card h3 { color: #c5a059; margin-top: 0; border-bottom: 1px solid #334460; padding-bottom: 6px; font-size: 1.1em; }
         .contact-card p { margin: 8px 0; font-size: 0.95em; }
         .contact-card a { color: #c5a059; text-decoration: none; font-weight: bold; }
+        
         .full-width-coordinates { grid-column: span 3; background-color: #0f1e36; border-top: 4px solid #c5a059; text-align: center; padding: 15px; border-radius: 4px; margin-top: 20px; box-sizing: border-box; }
         .full-width-coordinates p { margin: 0; font-size: 1.1em; font-weight: bold; color: #fff; }
         .full-width-coordinates a { color: #c5a059; text-decoration: none; }
+        
         footer { text-align: center; padding: 25px; color: #666; font-size: 0.85em; border-top: 1px solid #e0e0e0; background-color: #f7f9fa; margin-top: auto; width: 100%; box-sizing: border-box; }
         .bci-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 30, 54, 0.98); display: flex; align-items: center; justify-content: center; z-index: 10000; padding: 20px; }
         .bci-modal-content { background: #fff; max-width: 650px; width: 100%; padding: 35px; border-radius: 6px; border-top: 6px solid #c5a059; text-align: left; }
         .bci-btn { background-color: #0f1e36; color: #fff; border: none; padding: 12px 35px; font-family: 'Georgia', serif; cursor: pointer; border-radius: 4px; text-transform: uppercase; }
-        @media(max-width: 900px) { header { flex-direction: column; text-align: center; gap: 15px; padding: 20px; } .right-credentials { text-align: center; } .contact-grid { grid-template-columns: 1fr; } .full-width-coordinates { grid-column: span 1; } .grid { grid-template-columns: 1fr; } }
+        
+        @media(max-width: 900px) { 
+            header { flex-direction: column; text-align: center; gap: 15px; padding: 20px; } 
+            .right-credentials { text-align: center; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .full-width-coordinates { grid-column: span 1; }
+            .grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
+
     <div id="bciModal" class="bci-modal-overlay">
         <div class="bci-modal-content">
             <h3>Bar Council of India Compliance Declaration</h3>
-            <p>Under statutory rules of the Bar Council of India, advocates are prohibited from soliciting work or advertising. This portal serves purely as an educational and informational directory mapping credentials and write-ups.</p>
+            <p>Under statutory rules of the Bar Council of India (specifically Rule 36 of Section IV, Chapter II, Part VI), advocates are prohibited from soliciting work or advertising their professional services in any form.</p>
+            <p>By clicking <strong>"I AGREE"</strong> below, the user explicitly acknowledges and confirms the following protocols:</p>
+            <ul>
+                <li>The user is seeking information regarding LawNat and Manoj Kumar Tiwari, Advocate, entirely out of their own volition and for informational or academic purposes.</li>
+                <li>There has been no form of advertisement, personal communication, solicitation, invitation, or inducement of any sort whatsoever from this office or its members to solicit work through this platform.</li>
+                <li>The materials provided on this website are educational assets and do not constitute legal advice, strategic counseling, or create a formal advocate-client relationship.</li>
+            </ul>
+            <p style="font-style: italic; margin-top: 15px; font-size: 0.9em; color: #666;">All particulars published within this terminal are true, factual, and strictly aligned with the permitted Schedule under Rule 36 rules.</p>
             <div style="text-align: center; margin-top: 25px;"><button type="button" class="bci-btn" onclick="document.getElementById('bciModal').style.display='none';">I Agree</button></div>
         </div>
     </div>
+
+    <!-- Active Logic Radio Buttons -->
     <input type="radio" name="site-tabs" id="tab1" checked>
     <input type="radio" name="site-tabs" id="tab2">
     <input type="radio" name="site-tabs" id="tab3">
     <input type="radio" name="site-tabs" id="tab4">
+
+    <!-- Header Panel -->
     <header>
         <div class="logo-container"><img src="logo.png" alt="LawNat Logo" onerror="this.style.display='none'"></div>
         <div class="center-branding"><h1>LawNat</h1><div class="motto">Serving Justice</div></div>
         <div class="right-credentials"><div class="lawyer-name">Manoj Kumar Tiwari</div><div class="advocate-title">Advocate</div><div class="degrees">B.Sc., DCA, LL.B</div></div>
     </header>
+
     <div class="tab-navigation">
         <label for="tab1" class="tab-label" id="lbl1">Profile</label>
         <label for="tab2" class="tab-label" id="lbl2">Practice Dimensions</label>
         <label for="tab3" class="tab-label" id="lbl3">Academic Section</label>
         <label for="tab4" class="tab-label" id="lbl4">Directory & Office</label>
     </div>
+
     <div class="container">
+        <!-- TAB 1: PROFILE -->
         <div id="aboutWindow" class="tab-window">
             <h2>Professional Profile</h2>
             <p>Welcome to LawNat. Founded and maintained by Manoj Kumar Tiwari, Advocate, this portal operates as a premium research directory and professional legal repository. Anchored in New Delhi, the practice leverages about 17 years of extensive legal practice experience to deliver precise statutory interpretation, complex appellate briefing configurations, and thorough academic tracking across volatile domestic and multilateral legal spaces.</p>
             <h2>Jurisdictions & Practice Venues</h2>
-            <div class="jurisdictions-list"><strong>Supreme Court of India</strong> • High Court of Delhi & State High Courts • National Company Law Tribunal (NCLT) • National Company Law Appellate Tribunal (NCLAT) • National Consumer Disputes Redressal Commission (NCDRC) • National Green Tribunal (NGT) • District & Sessions Courts</div>
+            <div class="jurisdictions-list">
+                <strong>Supreme Court of India</strong> • High Court of Delhi & State High Courts • National Company Law Tribunal (NCLT) • National Company Law Appellate Tribunal (NCLAT) • National Consumer Disputes Redressal Commission (NCDRC) • National Green Tribunal (NGT) • District & Sessions Courts
+            </div>
         </div>
+
+        <!-- TAB 2: PRACTICE DIMENSIONS -->
         <div id="expertiseWindow" class="tab-window">
             <h2>Dimensions of Practice</h2>
             <div class="grid">
-                <div class="card"><h3>Public International Law</h3><p>Providing expert legal scrutiny involving the application of multilateral treaties, state responsibility frameworks, state immunity doctrines, and diplomatic convention dynamics before domestic courts and international forums.</p></div>
-                <div class="card"><h3>International Refugee & Asylum Law</h3><p>Rigorous handling of compliance frameworks governed by the 1951 Refugee Convention, custom evaluations regarding UNHCR mandate protections, human rights enforcement architectures, and the absolute invocation of the customary international principle of <em>non-refoulement</em>.</p></div>
-                <div class="card"><h3>Appellate Litigation</h3><p>Drafting structured Special Leave Petitions (SLPs), high appellate filings, statutory appeals, and comprehensive writs under Constitutional frameworks.</p></div>
-                <div class="card"><h3>Corporate & Insolvency Jurisprudence</h3><p>Navigating systemic corporate asset resolution practices under the Insolvency and Bankruptcy Code (IBC), alongside managing company petition actions before the NCLT and NCLAT.</p></div>
-                <div class="card"><h3>Consumer Dispute Resolution</h3><p>Handling premium advocacy, consumer fraud liability audits, and multi-tier claims before District, State, and National Consumer Commissions (NCDRC).</p></div>
-                <div class="card"><h3>Civil, Criminal & Statutory Drafting</h3><p>Precision execution of legal notices, statement of claims, commercial contracts, bail applications, and trial advocacy metrics within Sessions Courts.</p></div>
-            </div>
-        </div>
-        <div id="academicWindow" class="tab-window">
-            <h2>Academic Section & Legal Write-Ups</h2>
+                <div class="card">
+                    <h3>Public International Law</h3>
