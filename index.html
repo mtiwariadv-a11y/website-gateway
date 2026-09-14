@@ -14,7 +14,7 @@
         .center-branding { text-align: center; flex: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; }
         .center-branding h1 { margin: 0; font-size: 2.4em; font-weight: normal; letter-spacing: 2px; color: #c5a059; line-height: 1; }
         
-        /* Stretches Serving Justice to completely equalize with the visual span width of LawNat */
+        /* Motto length perfectly aligned with LawNat */
         .center-branding .motto { margin: 6px 0 0 0; color: #fff; font-style: italic; font-size: 0.85em; letter-spacing: 4.8px; text-transform: uppercase; text-align: center; width: 100%; display: block; padding-left: 4.8px; box-sizing: border-box; }
         
         .right-credentials { text-align: right; flex: 1; }
@@ -32,13 +32,13 @@
         
         input[type="radio"] { display: none; }
         
-        /* Fixed CSS Alignment Matrices */
+        /* Direct Layout Switching Mechanics */
         #tab1:checked ~ .tab-navigation #lbl1, #tab2:checked ~ .tab-navigation #lbl2, #tab3:checked ~ .tab-navigation #lbl3, #tab4:checked ~ .tab-navigation #lbl4 { color: #c5a059; font-weight: bold; border-bottom: 3px solid #c5a059; background: rgba(255,255,255,0.05); }
         #tab1:checked ~ .container #aboutWindow, #tab2:checked ~ .container #expertiseWindow, #tab3:checked ~ .container #academicWindow, #tab4:checked ~ .container #contactWindow { display: block !important; }
 
         .jurisdictions-list { background: #f4f6f9; padding: 20px; border-left: 5px solid #c5a059; margin-top: 20px; font-size: 1.05em; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
-        .card { background: #fff; padding: 20px; border: 1px solid #e0e0e0; border-top: 4px solid #0f1e36; }
+        .card { background: #fff; padding: 20px; border: 1px solid #e0e0e0; border-top: 4px solid #0f1e36; box-sizing: border-box; }
         .card h3 { margin-top: 0; color: #0f1e36; }
         .post-preview { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ccc; }
         
@@ -82,7 +82,7 @@
     <input type="radio" name="site-tabs" id="tab3">
     <input type="radio" name="site-tabs" id="tab4">
 
-    <!-- Header Panel -->
+    <!-- Master Header Panel -->
     <header>
         <div class="logo-container"><img src="logo.png" alt="LawNat Logo" onerror="this.style.display='none'"></div>
         <div class="center-branding"><h1>LawNat</h1><div class="motto">Serving Justice</div></div>
