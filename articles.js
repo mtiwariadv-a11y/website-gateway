@@ -1,6 +1,5 @@
 const lawNatArticles = [
     {
-    {
         title: "THE CONSTITUTIONAL SUPREMACY OF ARTICLE 227: NAVIGATING STATUTORY APPEALS AND THE BASIC STRUCTURE DOCTRINE",
         date: "September 2026",
         content: `A recurring procedural question in Indian litigation is often stated too late. A litigant loses before a subordinate court or tribunal. A statutory first appeal is available. The first appeal is pursued and fails. The matter then reaches the stage of a second appeal, revision, or some other restricted statutory remedy. Only then does counsel begin to ask whether the original adjudication suffered from a defect which was never properly examined. By that stage, the character of the litigation may have changed completely.<br><br>
