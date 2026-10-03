@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LawNat | Manoj Kumar Tiwari, Advocate</title>
-    <!-- We load the styling rules from your external file to keep index small -->
-    <link rel="stylesheet" href="style.css?v=80">
+    <!-- Links safely to your site layout stylesheet framework sheets -->
+    <link rel="stylesheet" href="style.css?v=88">
+    <style>
+        /* FIXED: Permanently hides the raw structural background switching dots from the top view */
+        input[type="radio"] { display: none !important; }
+    </style>
 </head>
 <body>
     <div id="bciModal" class="bci-modal-overlay">
@@ -17,6 +21,7 @@
         </div>
     </div>
 
+    <!-- Background Radio Node Decks -->
     <input type="radio" name="tabs" id="tab1" checked>
     <input type="radio" name="tabs" id="tab2">
     <input type="radio" name="tabs" id="tab3">
@@ -85,8 +90,8 @@
 
     <footer><p>&copy; 2026 LawNat | Manoj Kumar Tiwari, Advocate. All particulars published in strict accordance with Rule 36 of the Bar Council of India Rules.</p></footer>
 
-    <!-- Clean, independent engine loader script links -->
-    <script src="articles.js?v=900"></script>
+    <!-- Clean, independent data compiler connection vectors -->
+    <script src="articles.js?v=702"></script>
     <script>
         window.addEventListener('DOMContentLoaded', () => {
             const container = document.getElementById('dynamicArticlesContainer');
@@ -95,4 +100,3 @@
                     const post = document.createElement('div');
                     post.className = 'post-preview';
                     const shareText = encodeURIComponent(`Read: "${article.title}" on LawNat`);
-                    const url = encodeURIComponent(window.location.origin + window.location.pathname);
