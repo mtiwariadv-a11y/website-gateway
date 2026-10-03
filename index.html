@@ -90,14 +90,65 @@
 
     <footer><p>&copy; 2026 LawNat | Manoj Kumar Tiwari, Advocate. All particulars published in strict accordance with Rule 36 of the Bar Council of India Rules.</p></footer>
 
-    <!-- RE-ENGINEERED INSTANT RENDER INTERFACE LOOP -->
+       <!-- REPROGRAMMED INTERACTIVE DATA CONDUIT ENGINE -->
     <script>
         function runLawNatContentLoader() {
             const container = document.getElementById('dynamicArticlesContainer');
             if (!container) return;
+            
+            // Prevents duplicating cards if already rendered
+            if (container.children.length > 0) return;
+            
+            // Clean slate assignment
             container.innerHTML = '';
             
-            // Verifies that article.js array variables are loaded live
             if (typeof lawNatArticles !== 'undefined' && Array.isArray(lawNatArticles)) {
                 lawNatArticles.forEach((article, index) => {
                     const post = document.createElement('div');
+                    post.className = 'post-preview';
+                    const shareText = encodeURIComponent(`Read: "${article.title}" on LawNat`);
+                    const url = encodeURIComponent(window.location.origin + window.location.pathname);
+                    
+                    post.innerHTML = `
+                        <h3>${article.title}</h3>
+                        <span class="post-date">${article.date}</span>
+                        <div id="tray-${index}" class="article-expanded-tray">
+                            <p>${article.content}</p>
+                        </div>
+                        <button type="button" id="btn-${index}" class="read-more-toggle-btn">Read Article</button>
+                    `;
+                    container.appendChild(post);
+                    
+                    const btn = post.querySelector(`#btn-${index}`);
+                    const tray = post.querySelector(`#tray-${index}`);
+                    
+                    btn.addEventListener('click', () => {
+                        if (tray.style.display === 'block') {
+                            tray.style.display = 'none';
+                            btn.textContent = 'Read Article';
+                        } else {
+                            tray.style.display = 'block';
+                            btn.textContent = 'Hide Content';
+                        }
+                    });
+                });
+            }
+        }
+
+        // TRIGGER CONTROL: Explicitly fires the loop ONLY when the Academic Section radio node is selected
+        document.getElementById('tab3').addEventListener('change', (e) => {
+            if (e.target.checked) {
+                runLawNatContentLoader();
+            }
+        });
+
+        // Fail-safe check in case a deep-link directly references the academic viewport parameters
+        window.addEventListener('load', () => {
+            if (document.getElementById('tab3').checked) {
+                runLawNatContentLoader();
+            }
+        });
+    </script>
+    <script src="articles.js?v=final_conduit"></script>
+</body>
+</html>
