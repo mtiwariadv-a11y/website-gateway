@@ -86,15 +86,62 @@
         </div>
     </div>
 
-    <footer><p>&copy; 2026 LawNat | Manoj Kumar Tiwari, Advocate. All particulars published in strict accordance with Rule 36 of the Bar Council of India Rules.</p></footer>
+       <footer><p>&copy; 2026 LawNat | Manoj Kumar Tiwari, Advocate. All particulars published in strict accordance with Rule 36 of the Bar Council of India Rules.</p></footer>
 
+    <!-- This script executes the layout compiler engine loop -->
     <script>
-        // Standard non-blocking asynchronous compiler layout interface
-        window.addEventListener('DOMContentLoaded', () => {
+        function runLawNatContentLoader() {
             const container = document.getElementById('dynamicArticlesContainer');
-            if (container && typeof lawNatArticles !== 'undefined' && Array.isArray(lawNatArticles)) {
-                container.innerHTML = '';
+            if (!container) return;
+            
+            container.innerHTML = '';
+            
+            if (typeof lawNatArticles !== 'undefined' && Array.isArray(lawNatArticles)) {
                 lawNatArticles.forEach((article, index) => {
                     const post = document.createElement('div');
                     post.className = 'post-preview';
                     const shareText = encodeURIComponent(`Read: "${article.title}" on LawNat`);
+                    const url = encodeURIComponent(window.location.origin + window.location.pathname);
+                    
+                    post.innerHTML = `
+                        <h3>${article.title}</h3>
+                        <span class="post-date">${article.date}</span>
+                        <div id="tray-${index}" class="article-expanded-tray">
+                            <p>${article.content}</p>
+                            <div class="article-share-bar">
+                                <span class="share-label">Share:</span>
+                                <a href="https://wa.me{shareText}%20at%20${url}" target="_blank" rel="noopener" class="share-btn"><svg viewBox="0 0 24 24" width="100%" height="100%"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.84 14.02c-.25.7-1.44 1.28-1.99 1.34-.5.06-1.14.08-1.84-.15a11.13 11.13 0 0 1-4.66-2.92c-1.3-1.3-2.2-2.84-2.52-3.4-.33-.56-.04-.86.24-1.14l.56-.56c.08-.08.17-.11.23-.03.22.45.73 1.78.79 1.91.06.11.06.25-.03.42-.08.14-.14.23-.25.34-.11.11-.23.25-.11.45.45.76 1.01 1.41 1.72 1.94.59.45 1.07.68 1.24.76.17.08.28.06.37-.03.11-.11.48-.56.62-.76.14-.2.28-.17.48-.08.2.08 1.27.6 1.49.71.23.11.37.17.42.25.06.11.06.65-.19 1.35Z"/></svg></a>
+                            </div>
+                        </div>
+                        <button type="button" id="btn-${index}" class="read-more-toggle-btn">Read Article</button>
+                    `;
+                    container.appendChild(post);
+                    
+                    const btn = post.querySelector(`#btn-${index}`);
+                    const tray = post.querySelector(`#tray-${index}`);
+                    
+                    btn.addEventListener('click', () => {
+                        if (tray.style.display === 'block') {
+                            tray.style.display = 'none';
+                            btn.textContent = 'Read Article';
+                        } else {
+                            tray.style.display = 'block';
+                            btn.textContent = 'Hide Content';
+                        }
+                    });
+                });
+            }
+        }
+
+        // Asynchronous structural check block
+        if (document.readyState === 'complete') {
+            runLawNatContentLoader();
+        } else {
+            window.addEventListener('load', runLawNatContentLoader);
+        }
+    </script>
+
+    <!-- FIXED LINK LOCATION: We call your standalone data file right before the body ends -->
+    <script src="articles.js?v=999"></script>
+</body>
+</html>
