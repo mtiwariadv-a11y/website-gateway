@@ -190,13 +190,13 @@
         <p>&copy; 2026 LawNat | Manoj Kumar Tiwari, Advocate. All particulars published in strict accordance with Rule 36 of the Bar Council of India Rules.</p>
     </footer>
 
-    <!-- STABLE BRIDGED LOGIC TO PREVENT ASYNCHRONOUS LOAD BLANK FREEZES -->
+    <!-- INTERACTIVE CONTENT ENGINE WITH SAFE WINDOW ASSURANCE LOADERS -->
     <script>
-        function renderLawNatRepository() {
+        function runLawNatContentLoader() {
             const container = document.getElementById('dynamicArticlesContainer');
             if (!container) return;
             
-            // Wipe any frozen nodes completely
+            // Clean out legacy fragments safely
             container.innerHTML = '';
             
             if (typeof lawNatArticles !== 'undefined' && Array.isArray(lawNatArticles)) {
@@ -248,15 +248,15 @@
             }
         }
 
-        // Monitors system status to verify variable injection is complete before running
+        // Global synchronization assurance check block
         if (document.readyState === 'complete') {
-            renderLawNatRepository();
+            runLawNatContentLoader();
         } else {
-            window.addEventListener('load', renderLawNatRepository);
+            window.addEventListener('load', runLawNatContentLoader);
         }
     </script>
 
-    <!-- Connects the dynamic separate data script dashboard -->
-    <script src="articles.js?v=4"></script>
+    <!-- Connects the dynamic separate data script dashboard with forced execution boundaries -->
+    <script src="articles.js?v=99"></script>
 </body>
 </html>
