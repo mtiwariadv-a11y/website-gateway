@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LawNat | Manoj Kumar Tiwari, Advocate</title>
     <style>
-        /* Forces clean, justified text orientation across the entire framework */
         body { font-family: 'Georgia', serif; color: #222; line-height: 1.6; margin: 0; padding: 0; background-color: #fcfcfc; display: flex; flex-direction: column; min-height: 100vh; text-align: justify; }
-        
-        /* Premium Three-Column Header Layout with Top Gold Accent Line Framing */
         header { background-color: #0f1e36; color: #fff; padding: 15px 40px; border-top: 4px solid #c5a059; border-bottom: 4px solid #c5a059; display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; text-align: left; min-height: 120px; }
         .logo-container img { max-width: 110px; height: auto; display: block; border: none; }
         .center-branding { text-align: center; flex: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; }
@@ -21,7 +18,6 @@
         .right-credentials .advocate-title { font-size: 0.9em; color: #c5a059; font-weight: normal; text-transform: uppercase; margin: 3px 0 0 0; letter-spacing: 1px; display: block; }
         .right-credentials .degrees { color: #ffffff; font-size: 0.9em; font-weight: bold; font-style: normal; margin: 3px 0 0 0; display: block; }
         
-        /* FIXED: Added explicit vertical padding coordinates to ensure WhatsApp icon is 100% visible */
         .social-icon-strip { margin-top: 14px; display: flex; justify-content: flex-end; gap: 15px; align-items: center; min-height: 32px; padding: 2px 0; box-sizing: border-box; }
         .social-icon-link { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; fill: #aaa; transition: fill 0.3s, transform 0.2s; }
         .social-icon-link:hover { fill: #c5a059; transform: scale(1.1); }
@@ -32,11 +28,10 @@
         
         .container { max-width: 950px; margin: 20px auto 40px auto; padding: 0 20px; box-sizing: border-box; flex: 1 0 auto; width: 100%; }
         h2 { border-bottom: 2px solid #0f1e36; padding-bottom: 8px; color: #0f1e36; font-size: 1.5em; text-align: left; }
-        .tab-window { display: none; }
+        .tab-window { display: none; width: 100%; box-sizing: border-box; }
         
         input[type="radio"] { display: none; }
         
-        /* Tab Routing Engines */
         #tab1:checked ~ .tab-navigation #lbl1, 
         #tab2:checked ~ .tab-navigation #lbl2, 
         #tab3:checked ~ .tab-navigation #lbl3, 
@@ -52,12 +47,10 @@
         .card { background: #fff; padding: 20px; border: 1px solid #e0e0e0; border-top: 4px solid #0f1e36; box-sizing: border-box; text-align: justify; }
         .card h3 { margin-top: 0; color: #0f1e36; text-align: left; }
         
-        /* Premium Styling Rules for the Academic Card Panels */
         .post-preview { margin-bottom: 25px; padding: 25px; background: #fff; border: 1px solid #e8e8e8; border-left: 4px solid #0f1e36; border-radius: 4px; box-sizing: border-box; text-align: justify; }
         .post-preview h3 { margin: 0 0 5px 0; color: #0f1e36; text-align: left; font-size: 1.3em; }
         .post-date { display: block; font-size: 0.85em; color: #888; font-family: 'Arial', sans-serif; margin-bottom: 12px; }
         
-        /* Interactive Expand Container Tray Elements */
         .article-expanded-tray { display: none; margin-top: 15px; padding-top: 15px; border-top: 1px solid #eee; }
         .read-more-toggle-btn { background-color: #0f1e36; color: #c5a059; border: 1px solid #c5a059; padding: 8px 20px; font-family: 'Georgia', serif; font-size: 0.88em; cursor: pointer; border-radius: 4px; display: inline-block; margin-top: 10px; transition: all 0.3s; }
         .read-more-toggle-btn:hover { background-color: #c5a059; color: #0f1e36; }
@@ -97,7 +90,7 @@
         </div>
     </div>
 
-    <!-- Active Interface Switching Tabs -->
+    <!-- Active Logic Radio Buttons -->
     <input type="radio" name="tabs" id="tab1" checked>
     <input type="radio" name="tabs" id="tab2">
     <input type="radio" name="tabs" id="tab3">
@@ -197,12 +190,13 @@
         <p>&copy; 2026 LawNat | Manoj Kumar Tiwari, Advocate. All particulars published in strict accordance with Rule 36 of the Bar Council of India Rules.</p>
     </footer>
 
-    <!-- RE-ENGINEERED FAIL-SAFE ISOLATED DATA RETRIEVAL INTERFACE -->
+    <!-- STABLE BRIDGED LOGIC TO PREVENT ASYNCHRONOUS LOAD BLANK FREEZES -->
     <script>
-        function initializeLawNatContentEngine() {
+        function renderLawNatRepository() {
             const container = document.getElementById('dynamicArticlesContainer');
             if (!container) return;
             
+            // Wipe any frozen nodes completely
             container.innerHTML = '';
             
             if (typeof lawNatArticles !== 'undefined' && Array.isArray(lawNatArticles)) {
@@ -254,11 +248,15 @@
             }
         }
 
-        // Asynchronous load safeguard: hooks engine compiling strictly to windows asset resolutions
-        window.addEventListener('load', initializeLawNatContentEngine);
+        // Monitors system status to verify variable injection is complete before running
+        if (document.readyState === 'complete') {
+            renderLawNatRepository();
+        } else {
+            window.addEventListener('load', renderLawNatRepository);
+        }
     </script>
 
-    <!-- Connects the dynamic separate database script script dashboard -->
-    <script src="articles.js"></script>
+    <!-- Connects the dynamic separate data script dashboard -->
+    <script src="articles.js?v=4"></script>
 </body>
 </html>
