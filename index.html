@@ -107,12 +107,11 @@
                 <li>There has been no form of advertisement, personal communication, solicitation, invitation, or inducement of any sort whatsoever from this office or its members to solicit work through this platform.</li>
                 <li>The materials provided on this website are educational assets and do not constitute legal advice, strategic counseling, or create a formal advocate-client relationship.</li>
             </ul>
-            <p style="font-style: italic; margin-top: 15px; font-size: 0.9em; color: #666;">All particulars published within this terminal are true, factual, and strictly aligned with the permitted Schedule under Rule 36 rules.</p>
             <div style="text-align: center; margin-top: 25px;"><button type="button" class="bci-btn" onclick="document.getElementById('bciModal').style.display='none';">I Agree</button></div>
         </div>
     </div>
 
-    <!-- Interface Switching Controls -->
+    <!-- Active Navigation Radio Controllers -->
     <input type="radio" name="tabs" id="tab1" checked>
     <input type="radio" name="tabs" id="tab2">
     <input type="radio" name="tabs" id="tab3">
@@ -223,7 +222,7 @@
         <p>&copy; 2026 LawNat | Manoj Kumar Tiwari, Advocate. All particulars published in strict accordance with Rule 36 of the Bar Council of India Rules.</p>
     </footer>
 
-    <!-- STREMLINED DYNAMIC DATA CONDUIT ENGINE -->
+    <!-- FIXED STREAMLINED DYNAMIC DATA CONDUIT ENGINE -->
     <script>
         window.addEventListener('DOMContentLoaded', () => {
             const container = document.getElementById('dynamicArticlesContainer');
@@ -233,7 +232,7 @@
                     post.className = 'post-preview';
                     
                     const shareText = encodeURIComponent(`Read this legal insight: "${article.title}" on LawNat`);
-                    const currentUrl = encodeURIComponent(window.location.href);
+                    const currentUrl = encodeURIComponent(window.location.origin + window.location.pathname);
                     
                     post.innerHTML = `
                         <h3>${article.title}</h3>
@@ -241,7 +240,7 @@
                         <p>${article.content}</p>
                         <div class="article-share-bar">
                             <span class="share-label">Share article:</span>
-                            <a href="https://wa.me{shareText}" target="_blank" rel="noopener" class="share-btn" title="Share via WhatsApp">
+                            <a href="https://wa.me{shareText}%20at%20${currentUrl}" target="_blank" rel="noopener" class="share-btn" title="Share via WhatsApp">
                                 <svg viewBox="0 0 24 24" width="100%" height="100%"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.84 14.02c-.25.7-1.44 1.28-1.99 1.34-.5.06-1.14.08-1.84-.15a11.13 11.13 0 0 1-4.66-2.92c-1.3-1.3-2.2-2.84-2.52-3.4-.33-.56-.04-.86.24-1.14l.56-.56c.08-.08.17-.11.23-.03.22.45.73 1.78.79 1.91.06.11.06.25-.03.42-.08.14-.14.23-.25.34-.11.11-.23.25-.11.45.45.76 1.01 1.41 1.72 1.94.59.45 1.07.68 1.24.76.17.08.28.06.37-.03.11-.11.48-.56.62-.76.14-.2.28-.17.48-.08.2.08 1.27.6 1.49.71.23.11.37.17.42.25.06.11.06.65-.19 1.35Z"/></svg>
                             </a>
                             <a href="https://linkedin.com{currentUrl}" target="_blank" rel="noopener" class="share-btn" title="Share on LinkedIn">
@@ -258,7 +257,7 @@
         });
     </script>
 
-    <!-- Connects the dynamic separate database script script dashboard -->
+    <!-- Connects the dynamic separate data script dashboard -->
     <script src="articles.js"></script>
 </body>
 </html>
