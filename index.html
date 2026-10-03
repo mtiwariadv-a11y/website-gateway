@@ -113,7 +113,7 @@
                         <h3>${article.title}</h3>
                         <span class="post-date">${article.date}</span>
                         <div id="tray-${index}" class="article-expanded-tray">
-                            <p>${article.content}</p>
+                            <p>${article.content}${article.content_extended ? article.content_extended : ''}</p>
                         </div>
                         <button type="button" id="btn-${index}" class="read-more-toggle-btn">Read Article</button>
                     `;
