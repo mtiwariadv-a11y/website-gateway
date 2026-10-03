@@ -90,7 +90,7 @@
 
     <footer><p>&copy; 2026 LawNat | Manoj Kumar Tiwari, Advocate. All particulars published in strict accordance with Rule 36 of the Bar Council of India Rules.</p></footer>
 
-       <!-- REPROGRAMMED INTERACTIVE DATA CONDUIT ENGINE -->
+          <!-- REPROGRAMMED INTERACTIVE DATA CONDUIT ENGINE -->
     <script>
         function runLawNatContentLoader() {
             const container = document.getElementById('dynamicArticlesContainer');
@@ -109,11 +109,12 @@
                     const shareText = encodeURIComponent(`Read: "${article.title}" on LawNat`);
                     const url = encodeURIComponent(window.location.origin + window.location.pathname);
                     
+                    // RESTORED CLEAN MARKUP: Maps everything straight out of the singular content parameter
                     post.innerHTML = `
                         <h3>${article.title}</h3>
                         <span class="post-date">${article.date}</span>
                         <div id="tray-${index}" class="article-expanded-tray">
-                            <p>${article.content}${article.content_extended ? article.content_extended : ''}</p>
+                            <p>${article.content}</p>
                         </div>
                         <button type="button" id="btn-${index}" class="read-more-toggle-btn">Read Article</button>
                     `;
@@ -149,6 +150,6 @@
             }
         });
     </script>
-    <script src="articles.js?v=final_conduit"></script>
+    <script src="articles.js?v=restored_conduit"></script>
 </body>
 </html>
