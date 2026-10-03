@@ -16,10 +16,10 @@ This premium constitutional brief examines the exceptional, supervisory, and dis
 The complete, full-length 14-section legal text, including all exhaustive analysis, paragraphs, and historic case citations (including <em>Waryam Singh</em>, <em>L. Chandra Kumar</em>, <em>Radhey Shyam</em>, and <em>Santosh Hazari</em>), is fully preserved and accessible below.<br><br>
 <div style="margin-top: 20px; padding: 15px; background-color: #f4f6f9; border-left: 4px solid #c5a059; border-radius: 4px; display: flex; align-items: center; justify-content: space-between;">
     <div style="font-family: Arial, sans-serif; font-size: 0.9em; color: #0f1e36;">
-        <strong>ARTICLE_227_MASTER_BRIEF.pdf</strong><br>
+        <strong>ARTICLE_227_MASTER_BRIEF.txt</strong><br>
         <span style="color: #666; font-size: 0.85em;">Complete 14-Section Long-Form Treatise</span>
     </div>
-    <a href="Article_227_Master_Brief.pdf" target="_blank" style="background-color: #0f1e36; color: #c5a059; text-decoration: none; padding: 8px 18px; font-family: Arial, sans-serif; font-size: 0.85em; font-weight: bold; border-radius: 4px; border: 1px solid #c5a059; transition: all 0.3s;">View / Download PDF</a>
+    <a href="Article_227_Master_Brief.txt" target="_blank" style="background-color: #0f1e36; color: #c5a059; text-decoration: none; padding: 8px 18px; font-family: Arial, sans-serif; font-size: 0.85em; font-weight: bold; border-radius: 4px; border: 1px solid #c5a059; transition: all 0.3s;">View / Download PDF</a>
 </div>`
     }
 ];
