@@ -47,15 +47,11 @@
         .card { background: #fff; padding: 20px; border: 1px solid #e0e0e0; border-top: 4px solid #0f1e36; box-sizing: border-box; text-align: justify; }
         .card h3 { margin-top: 0; color: #0f1e36; text-align: left; }
         
-        /* Premium Layout Styling Rules for the Academic Click-to-Expand Panels */
         .post-preview { margin-bottom: 25px; padding: 25px; background: #fff; border: 1px solid #e8e8e8; border-left: 4px solid #0f1e36; border-radius: 4px; box-sizing: border-box; text-align: justify; }
         .post-preview h3 { margin: 0 0 5px 0; color: #0f1e36; text-align: left; font-size: 1.3em; }
         .post-date { display: block; font-size: 0.85em; color: #888; font-family: 'Arial', sans-serif; margin-bottom: 12px; }
         
-        /* Hidden Extended Text Tray Layout Elements */
         .article-expanded-tray { display: none; margin-top: 15px; padding-top: 15px; border-top: 1px solid #eee; }
-        
-        /* Premium Click Interactive Button Design */
         .read-more-toggle-btn { background-color: #0f1e36; color: #c5a059; border: 1px solid #c5a059; padding: 8px 20px; font-family: 'Georgia', serif; font-size: 0.88em; cursor: pointer; border-radius: 4px; display: inline-block; margin-top: 10px; transition: all 0.3s; }
         .read-more-toggle-btn:hover { background-color: #c5a059; color: #0f1e36; }
         
@@ -77,7 +73,7 @@
         .bci-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 30, 54, 0.98); display: flex; align-items: center; justify-content: center; z-index: 10000; padding: 20px; }
         .bci-modal-content { background: #fff; max-width: 650px; width: 100%; padding: 35px; border-radius: 6px; border-top: 6px solid #c5a059; text-align: left; }
         .bci-btn { background-color: #0f1e36; color: #fff; border: none; padding: 12px 35px; font-family: 'Georgia', serif; cursor: pointer; border-radius: 4px; text-transform: uppercase; }
-        @media(max-width: 900px) { header { flex-direction: column; text-align: center; gap: 15px; padding: 20px; } .right-credentials { text-align: center; } .social-icon-strip { justify-content: center; margin-top: 12px; } .contact-grid { grid-template-columns: 1fr; } .full-width-coordinates { grid-column: span 1; } .grid { grid-template-columns: 1fr; } body, .jurisdictions-list, .card, .post-preview { text-align: left; } }
+        @media(max-width: 900px) { header { flex-direction: column; text-align: center; gap: 15px; padding: 20px; } .right-credentials { text-align: center; } .contact-grid { grid-template-columns: 1fr; } .full-width-coordinates { grid-column: span 1; } .grid { grid-template-columns: 1fr; } body, .jurisdictions-list, .card, .post-preview { text-align: left; } }
     </style>
 </head>
 <body>
@@ -96,7 +92,7 @@
         </div>
     </div>
 
-    <!-- Active Interface Controls -->
+    <!-- Active Logic Radio Buttons -->
     <input type="radio" name="tabs" id="tab1" checked>
     <input type="radio" name="tabs" id="tab2">
     <input type="radio" name="tabs" id="tab3">
@@ -123,7 +119,7 @@
                     <svg viewBox="0 0 24 24" width="100%" height="100%"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.8Z"/></svg>
                 </a>
                 <a href="https://wa.me" target="_blank" rel="noopener" class="social-icon-link" title="Instant WhatsApp Chat">
-                    <svg viewBox="0 0 24 24" width="100%" height="100%"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21-5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.84 14.02c-.25.7-1.44 1.28-1.99 1.34-.5.06-1.14.08-1.84-.15a11.13 11.13 0 0 1-4.66-2.92c-1.3-1.3-2.2-2.84-2.52-3.4-.33-.56-.04-.86.24-1.14l.56-.56c.08-.08.17-.11.23-.03.22.45.73 1.78.79 1.91.06.11.06.25-.03.42-.08.14-.14.23-.25.34-.11.11-.23.25-.11.45.45.76 1.01 1.41 1.72 1.94.59.45 1.07.68 1.24.76.17.08.28.06.37-.03.11-.11.48-.56.62-.76.14-.2.28-.17.48-.08.2.08 1.27.6 1.49.71.23.11.37.17.42.25.06.11.06.65-.19 1.35Z"/></svg>
+                    <svg viewBox="0 0 24 24" width="100%" height="100%"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.84 14.02c-.25.7-1.44 1.28-1.99 1.34-.5.06-1.14.08-1.84-.15a11.13 11.13 0 0 1-4.66-2.92c-1.3-1.3-2.2-2.84-2.52-3.4-.33-.56-.04-.86.24-1.14l.56-.56c.08-.08.17-.11.23-.03.22.45.73 1.78.79 1.91.06.11.06.25-.03.42-.08.14-.14.23-.25.34-.11.11-.23.25-.11.45.45.76 1.01 1.41 1.72 1.94.59.45 1.07.68 1.24.76.17.08.28.06.37-.03.11-.11.48-.56.62-.76.14-.2.28-.17.48-.08.2.08 1.27.6 1.49.71.23.11.37.17.42.25.06.11.06.65-.19 1.35Z"/></svg>
                 </a>
             </div>
         </div>
@@ -152,7 +148,7 @@
             <h2>Dimensions of Practice</h2>
             <div class="grid">
                 <div class="card"><h3>Constitutional Law</h3><p>Drafting highly structured Special Leave Petitions (SLPs), managing significant appellate filings, challenging statutory regulations, and handling high-stakes Writ Petitions under Constitutional frameworks.</p></div>
-                <div class="card"><h3>Corporate & Insolvency Jurisprudence</h3><p>Navigating systemic corporate asset resolution practices under the Insolvency and Bankruptcy Code (IBC), managing commercial actions, and representing corporate blocks before NCLT and NCLAT frameworks.</p></div>
+                <div class="card"><h3>Corporate & Insolvency Jurisprudence</h3><p>Navigating systemic corporate asset resolution practices under the Insolvency and Bankruptcy Code (IBC), managing complex commercial actions, and representing corporate blocks before NCLT and NCLAT frameworks.</p></div>
                 <div class="card"><h3>Service Matters</h3><p>Handling administrative tribunals, central and state public employment regulations, promotion matrices, pensions disputes, and protection rules governing service security.</p></div>
                 <div class="card"><h3>Family Law Jurisprudence</h3><p>Managing domestic relations disputes, guardianship declarations, partition suits, ancestral succession mappings, and matrimonial property arbitrations across complex statutory courts.</p></div>
                 <div class="card"><h3>Environmental Law & Regulations</h3><p>Handling compliance auditing, industrial regulatory litigation, and premium statutory defense challenges before the National Green Tribunal (NGT) frameworks.</p></div>
@@ -207,11 +203,16 @@
         <p>&copy; 2026 LawNat | Manoj Kumar Tiwari, Advocate. All particulars published in strict accordance with Rule 36 of the Bar Council of India Rules.</p>
     </footer>
 
-    <!-- INTERACTIVE ACCORDION TOGGLE LOGIC ENGINE -->
+    <!-- STABLE BRIDGED LOGIC TO PREVENT ASYNCHRONOUS LOAD BLANK FREEZES -->
     <script>
-        window.addEventListener('DOMContentLoaded', () => {
+        function renderLawNatRepository() {
             const container = document.getElementById('dynamicArticlesContainer');
-            if (typeof lawNatArticles !== 'undefined' && container) {
+            if (!container) return;
+            
+            // Wipe any frozen duplicate nodes completely
+            container.innerHTML = '';
+            
+            if (typeof lawNatArticles !== 'undefined' && Array.isArray(lawNatArticles)) {
                 lawNatArticles.forEach((article, index) => {
                     const post = document.createElement('div');
                     post.className = 'post-preview';
@@ -219,12 +220,10 @@
                     const shareText = encodeURIComponent(`Read this legal insight: "${article.title}" on LawNat`);
                     const currentUrl = encodeURIComponent(window.location.origin + window.location.pathname);
                     
-                    // Injecting individual title cards with hardcoded click-to-expand animation architecture
                     post.innerHTML = `
                         <h3>${article.title}</h3>
                         <span class="post-date">${article.date}</span>
                         
-                        <!-- Collapsible body panel tray -->
                         <div id="expandedTray-${index}" class="article-expanded-tray">
                             <p>${article.content}</p>
                             <div class="article-share-bar">
@@ -246,7 +245,6 @@
                     
                     container.appendChild(post);
                     
-                    // Attach dynamic toggle action framework
                     const btn = post.querySelector(`#toggleBtn-${index}`);
                     const tray = post.querySelector(`#expandedTray-${index}`);
                     
@@ -261,10 +259,13 @@
                     });
                 });
             }
-        });
+        }
+
+        // Monitors system status to verify variable injection is complete before running
+        window.addEventListener('load', renderLawNatRepository);
     </script>
 
-    <!-- Connects the dynamic separate data script dashboard -->
+    <!-- Connects the modular text repository arrays -->
     <script src="articles.js"></script>
 </body>
 </html>
