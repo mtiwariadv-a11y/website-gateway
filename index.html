@@ -56,6 +56,7 @@
         .bci-btn { background-color: #0f1e36; color: #fff; border: none; padding: 12px 35px; font-family: 'Georgia', serif; cursor: pointer; border-radius: 4px; text-transform: uppercase; }
         @media(max-width: 900px) { header { flex-direction: column; text-align: center; gap: 15px; padding: 20px; } .right-credentials { text-align: center; } .contact-grid { grid-template-columns: 1fr; } .full-width-coordinates { grid-column: span 1; } .grid { grid-template-columns: 1fr; } body, .jurisdictions-list, .card, .post-preview { text-align: left; } }
     </style>
+    <script src="articles.js?v=801"></script>
 </head>
 <body>
     <div id="bciModal" class="bci-modal-overlay">
@@ -72,104 +73,11 @@
         </div>
     </div>
 
-    <!-- Active Logic Radio Buttons -->
     <input type="radio" name="tabs" id="tab1" checked>
     <input type="radio" name="tabs" id="tab2">
     <input type="radio" name="tabs" id="tab3">
     <input type="radio" name="tabs" id="tab4">
 
-    <!-- Header Panel with Permanent Vector Symbols -->
     <header>
         <div class="logo-container"><img src="logo.png" alt="LawNat Logo" onerror="this.style.display='none'"></div>
-        <div class="center-branding">
-            <div class="text-lock-box">
-                <h1>LawNat</h1>
-                <div class="motto">Serving Justice</div>
-            </div>
-        </div>
-        <div class="right-credentials">
-            <div class="lawyer-name">Manoj Kumar Tiwari</div>
-            <div class="advocate-title">Advocate</div>
-            <div class="degrees">B.Sc., DCA, LL.B</div>
-            <div class="social-icon-strip">
-                <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon-link" title="LinkedIn Profile">
-                    <svg viewBox="0 0 24 24" width="100%" height="100%"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.8v8.37h2.8v-4.67c0-.25.02-.5.1-.68a1.14 1.14 0 0 1 1-.77c.76 0 1 .58 1 1.42v4.7h2.8M6.5 8.37a1.37 1.37 0 1 0 0-2.75 1.37 1.37 0 0 0 0 2.75M8 18.5V10.13H5.2v8.37H8Z"/></svg>
-                </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-link" title="Facebook Page">
-                    <svg viewBox="0 0 24 24" width="100%" height="100%"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.8Z"/></svg>
-                </a>
-                <a href="https://wa.me" target="_blank" rel="noopener" class="social-icon-link" title="Instant WhatsApp Chat">
-                    <svg viewBox="0 0 24 24" width="100%" height="100%"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.84 14.02c-.25.7-1.44 1.28-1.99 1.34-.5.06-1.14.08-1.84-.15a11.13 11.13 0 0 1-4.66-2.92c-1.3-1.3-2.2-2.84-2.52-3.4-.33-.56-.04-.86.24-1.14l.56-.56c.08-.08.17-.11.23-.03.22.45.73 1.78.79 1.91.06.11.06.25-.03.42-.08.14-.14.23-.25.34-.11.11-.23.25-.11.45.45.76 1.01 1.41 1.72 1.94.59.45 1.07.68 1.24.76.17.08.28.06.37-.03.11-.11.48-.56.62-.76.14-.2.28-.17.48-.08.2.08 1.27.6 1.49.71.23.11.37.17.42.25.06.11.06.65-.19 1.35Z"/></svg>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <div class="tab-navigation">
-        <label for="tab1" class="tab-label" id="lbl1">Profile</label>
-        <label for="tab2" class="tab-label" id="lbl2">Practice Dimensions</label>
-        <label for="tab3" class="tab-label" id="lbl3">Academic Section</label>
-        <label for="tab4" class="tab-label" id="lbl4">Directory & Office</label>
-    </div>
-
-    <div class="container">
-        <!-- TAB 1: PROFILE -->
-        <div id="aboutWindow" class="tab-window">
-            <h2>Professional Profile</h2>
-            <p>Welcome to LawNat. Founded and maintained by Manoj Kumar Tiwari, Advocate, this portal operates as a premium research directory and professional legal repository. Anchored in New Delhi, the practice leverages about 17 years of extensive legal practice experience to deliver precise statutory interpretation, complex appellate briefing configurations, and thorough academic tracking across volatile domestic and multilateral legal spaces.</p>
-            <h2>Jurisdictions & Practice Venues</h2>
-            <div class="jurisdictions-list">
-                <strong>Supreme Court of India</strong> • High Court of Delhi & State High Courts • National Company Law Tribunal (NCLT) • National Company Law Appellate Tribunal (NCLAT) • National Consumer Disputes Redressal Commission (NCDRC) • National Green Tribunal (NGT) • District & Sessions Courts
-            </div>
-        </div>
-
-        <!-- TAB 2: PRACTICE DIMENSIONS -->
-        <div id="expertiseWindow" class="tab-window">
-            <h2>Dimensions of Practice</h2>
-            <div class="grid">
-                <div class="card"><h3>Constitutional Law</h3><p>Drafting highly structured Special Leave Petitions (SLPs), managing significant appellate filings, challenging statutory regulations, and handling high-stakes Writ Petitions under Constitutional frameworks.</p></div>
-                <div class="card"><h3>Corporate & Insolvency Jurisprudence</h3><p>Navigating systemic corporate asset resolution practices under the Insolvency and Bankruptcy Code (IBC), managing complex commercial actions, and representing corporate blocks before NCLT and NCLAT frameworks.</p></div>
-                <div class="card"><h3>Service Matters</h3><p>Handling administrative tribunals, central and state public employment regulations, promotion matrices, pensions disputes, and protection rules governing service security.</p></div>
-                <div class="card"><h3>Family Law Jurisprudence</h3><p>Managing domestic relations disputes, guardianship declarations, partition suits, ancestral succession mappings, and matrimonial property arbitrations across complex statutory courts.</p></div>
-                <div class="card"><h3>Environmental Law & Regulations</h3><p>Handling compliance auditing, industrial regulatory litigation, and premium statutory defense challenges before the National Green Tribunal (NGT) frameworks.</p></div>
-                <div class="card"><h3>Public International Law</h3><p>Providing expert legal scrutiny involving the application of multilateral treaties, state responsibility frameworks, state immunity doctrines, and diplomatic convention dynamics before domestic courts and international forums.</p></div>
-                <div class="card"><h3>International Refugee & Asylum Law</h3><p>Rigorous handling of compliance frameworks governed by the 1951 Refugee Convention, custom evaluations regarding UNHCR mandate protections, human rights enforcement architectures, and the absolute invocation of the customary international principle of <em>non-refoulement</em>.</p></div>
-                <div class="card"><h3>Consumer Dispute Resolution</h3><p>Handling premium advocacy, consumer fraud liability audits, and multi-tier claims before District, State, and National Consumer Commissions (NCDRC).</p></div>
-                <div class="card"><h3>Civil, Criminal & Statutory Drafting</h3><p>Precision execution of legal notices, statement of claims, commercial contracts, bail applications, and trial advocacy metrics within Sessions Courts.</p></div>
-            </div>
-        </div>
-
-        <!-- TAB 3: ACADEMIC SECTION -->
-        <div id="academicWindow" class="tab-window">
-            <h2>Academic Section & Legal Write-Ups</h2>
-            <div id="dynamicArticlesContainer"></div>
-        </div>
-
-        <!-- TAB 4: DIRECTORY & OFFICE LOCATION PANELS -->
-        <div id="contactWindow" class="tab-window">
-            <h2>Office & Chamber Directory</h2>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <h3>Primary Venue</h3>
-                    <p><strong>Supreme Court of India</strong></p>
-                    <p>Tilak Marg, Mandi House</p>
-                    <p>New Delhi</p>
-                    <p>Pincode: 110001</p>
-                </div>
-                <div class="contact-card">
-                    <h3>Delhi Jurisdiction</h3>
-                    <p><strong>National Capital Region</strong></p>
-                    <p>New Ashok Nagar Venues</p>
-                    <p>New Delhi</p>
-                    <p style="font-style: italic; color: #aaa;">By Prior Appointment Only</p>
-                </div>
-                <div class="contact-card" style="background-color: #162a4a;">
-                    <h3>Prayagraj Jurisdiction</h3>
-                    <p><strong>State of Uttar Pradesh</strong></p>
-                    <p>Jhunsi Localities</p>
-                    <p>Prayagraj</p>
-                    <p style="font-style: italic; color: #aaa;">By Prior Appointment Only</p>
-                </div>
-            </div>
-            
-            <div class="full-width-coordinates">
+        <div class="center-branding"><div class="text-lock-box"><h1>LawNat</h1><div class="motto">Serving Justice</div></div></div>
