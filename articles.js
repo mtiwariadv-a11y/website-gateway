@@ -1,4 +1,37 @@
+/* 
+========================================================================
+   LAWNAT GLOBAL LEGAL REPOSITORY - ARTICLE CONFIGURATION DASHBOARD
+========================================================================
+   BCI RULE 36 COMPLIANT CONTENT STACK - OPERATES SEPARATELY FROM HTML
+   
+   HOW TO ADD A NEW NEW ARTICLE IN THE FUTURE:
+   Simply copy an entire item block from curly bracket { to closing }, 
+   paste it right above the first article, change the Title, Date, 
+   and content paragraph layers using basic HTML tags like <br><br> 
+   to divide your paragraphs cleanly.
+========================================================================
+*/
+
 const lawNatArticles = [
+    /* -----------------------------------------------------------------
+       [TEMPLATE STORAGE SLOT FOR FUTURE ARTICLE #2]
+       To activate this next slot, delete the comments surrounding it, 
+       add your details, and place a comma directly after its closing curly bracket.
+       ----------------------------------------------------------------- */
+    /*
+    {
+        title: "YOUR FUTURE ARTICLE TITLE PLACED HERE",
+        date: "October 2026",
+        content: `Your introductory paragraph text goes here.<br><br>
+        
+        <strong>I. YOUR NEXT SECTION HEADING LAYERS HERE</strong><br>
+        Your subsequent detailed legal brief text and analysis paragraph layers continue down here smoothly.`
+    },
+    */
+
+    /* -----------------------------------------------------------------
+       [ACTIVE REPOSITORY CARD - FLAGSHIP ARTICLE #1]
+       ----------------------------------------------------------------- */
     {
         title: "THE CONSTITUTIONAL SUPREMACY OF ARTICLE 227: NAVIGATING STATUTORY APPEALS AND THE BASIC STRUCTURE DOCTRINE",
         date: "September 2026",
@@ -25,11 +58,7 @@ This is where legal strategy frequently becomes mechanical. A judgment is passed
 
 <strong>IV. FIRST APPEAL: THE BROAD STATUTORY CORRECTIVE</strong><br>
 Section 96 CPC ordinarily gives the first appellate court a wide field. The significance of the first appeal was emphasized in Santosh Hazari v. Purushottam Tiwari, (2001) 3 SCC 179. The Supreme Court described the first appeal as a valuable right and held that, unless restricted by law, the whole case is open for rehearing on questions of fact and law. The first appellate court is ordinarily the final court of facts. This has an important consequence. If the complaint is simply: “The trial court believed the wrong witness” or: “The trial court should have drawn a different inference from the evidence,” the first appeal is ordinarily the natural statutory remedy. But the analysis changes if the complaint is: “The trial court never considered the material evidence at all.” That is not merely a complaint about the weight assigned to evidence. Nor is: “The finding is based upon a document whose contents, read as a whole, cannot support the proposition for which it has been used.” Nor: “The court has recorded a factual conclusion which is incapable of rational support from the evidence actually on record.” The lawyer must therefore distinguish error in appreciation from failure of adjudication. That distinction is central.<br><br>`
-    },
-    {
-        title: "THE CONSTITUTIONAL SUPREMACY OF ARTICLE 227: JURISDICTIONAL MECHANICS",
-        date: "September 2026",
-        content: `<strong>V. THE FIRST APPELLATE COURT ITSELF MUST ADJUDICATE</strong><br><br>
+<strong>V. THE FIRST APPELLATE COURT ITSELF MUST ADJUDICATE</strong><br><br>
 The existence of a first appeal does not mean that the first appellate court may merely endorse the trial court. Order XLI Rule 31 CPC requires the appellate judgment to state the points for determination, the decision thereon, the reasons for the decision and, where appropriate, the relief.<br><br>
 
 The Supreme Court has repeatedly insisted upon this duty. In B.V. Nagesh v. H.V. Sreenivasa Murthy, (2010) 13 SCC 530, the Court reiterated that the first appeal is a valuable right and that the appellate judgment must reflect conscious application of mind and reasons on the issues and contentions requiring decision. The significance is obvious. If the trial court fails to consider material evidence, and the first appellate court simply reproduces the trial court's reasoning without independently addressing the evidence, the defect may not have been cured merely because an appeal existed. The existence of an appellate remedy and the effective exercise of appellate jurisdiction are not identical propositions.<br><br>
@@ -53,12 +82,8 @@ Fourth: Will postponing the challenge until Section 100 materially narrow the ab
 
 <strong>IX. SECTION 100: THE NARROWING DOOR</strong><br><br>
 The second appeal under Section 100 CPC is deliberately restricted. The High Court does not sit as another court of facts. In Hero Vinoth v. Seshammal, (2006) 5 SCC 545, the Supreme Court explained the meaning of “substantial question of law” and recognized, among other things, that a question may become substantial where a court below has acted contrary to settled legal principles or where the decision is legally vitiated. The judgment also distinguishes factual inference from the legal effect or construction of a document.<br><br>
-This is where evidentiary errors become complicated. A submission that “the evidence favours the appellant” is ordinarily a factual submission. A submission that “the finding is legally unsustainable because material evidence was ignored and the conclusion has no rational evidentiary foundation” may present a substantially different question. The difference determines whether the matter remains an ordinary dispute about facts or becomes a question concerning the legal validity of the finding itself.`
-    },
-    {
-        title: "THE CONSTITUTIONAL SUPREMACY OF ARTICLE 227: LITIGATION STRATEGY & TRIBUNALS",
-        date: "September 2026",
-        content: `<strong>X. WHY THE FIRST ROUND MATTERS</strong><br><br>
+This is where evidentiary errors become complicated. A submission that “the evidence favours the appellant” is ordinarily a factual submission. A submission that “the finding is legally unsustainable because material evidence was ignored and the conclusion has no rational evidentiary foundation” may present a substantially different question. The difference determines whether the matter remains an ordinary dispute about facts or becomes a question concerning the legal validity of the finding itself.<br><br>`
+<strong>X. WHY THE FIRST ROUND MATTERS</strong><br><br>
 The statutory structure therefore creates a practical paradox. The first appellate court has the widest capacity to examine the record. The second appellate court has the narrowest. Therefore, if a serious defect in the original adjudication exists, counsel must consider its character before allowing the case to travel into the second-appellate corridor.<br><br>
 
 This does not mean that Article 227 should replace first appeal. It means the lawyer should not wait until Section 100 has become the only remaining statutory avenue before asking what was wrong with the first adjudication. By then, the case may have reached a practical point of no return. The law has not literally extinguished every remedy, but the available remedy may have become far less capable of correcting the original problem. That distinction between formal availability and practical efficacy deserves much greater attention.<br><br>
