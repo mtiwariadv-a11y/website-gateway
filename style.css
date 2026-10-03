@@ -56,7 +56,8 @@ header {
     margin: 0;
     font-size: 2.3em;
     font-weight: normal;
-    letter-spacing: -0.5px; color: #c5a059;
+    letter-spacing: -0.5px; 
+    color: #c5a059;
     line-height: 1;
     text-align: center;
     width: 100%;
@@ -149,6 +150,7 @@ header {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s;
+    display: inline-block;
 }
 .tab-label:hover {
     color: #fff;
@@ -168,9 +170,34 @@ h2 {
     font-size: 1.5em;
     text-align: left;
 }
+
+/* MANDATORY DISPLAY OVERRIDES: Makes clicked tabs reveal themselves flawlessly */
 .tab-window {
     display: none;
+    width: 100%;
+    box-sizing: border-box;
 }
+input[type="radio"] {
+    display: none !important;
+}
+
+#tab1:checked ~ .tab-navigation #lbl1, 
+#tab2:checked ~ .tab-navigation #lbl2, 
+#tab3:checked ~ .tab-navigation #lbl3, 
+#tab4:checked ~ .tab-navigation #lbl4 { 
+    color: #c5a059 !important; 
+    font-weight: bold !important; 
+    border-bottom: 3px solid #c5a059 !important; 
+    background: rgba(255,255,255,0.05); 
+}
+
+#tab1:checked ~ .container #aboutWindow, 
+#tab2:checked ~ .container #expertiseWindow, 
+#tab3:checked ~ .container #academicWindow, 
+#tab4:checked ~ .container #contactWindow { 
+    display: block !important; 
+}
+
 .jurisdictions-list {
     background: #f4f6f9;
     padding: 20px;
@@ -199,9 +226,8 @@ h2 {
     text-align: left;
 }
 
-/* FIXED ARTICLE PREVIEW VISIBILITY RULES */
+/* Article Layout System */
 .post-preview {
-    display: block !important;
     margin-bottom: 25px;
     padding: 25px;
     background: #fff;
@@ -224,8 +250,6 @@ h2 {
     font-family: 'Arial', sans-serif;
     margin-bottom: 12px;
 }
-
-/* Accordion Expand Tray Properties */
 .article-expanded-tray {
     display: none;
     margin-top: 15px;
