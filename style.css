@@ -384,12 +384,18 @@ footer {
     .social-icon-strip { justify-content: center; margin-top: 12px; }
     .tab-navigation { flex-wrap: wrap; }
     .tab-label { padding: 12px 10px; font-size: 0.85em; text-align: center; flex: 1 1 45%; box-sizing: border-box; }
+    
+    /* ENHANCED PRACTICE MATRIX GRID: Uniform vertical flow on narrow viewports */
+    .grid { grid-template-columns: 1fr; gap: 25px; margin-top: 25px; }
+    .card { background: #fff; padding: 25px; border: 1px solid #eef1f5; border-top: 4px solid #0f1e36; border-radius: 4px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; }
+    .card h3 { font-size: 1.25em; margin-bottom: 10px; color: #0f1e36; }
+    .card p { text-align: justify !important; font-size: 0.98em; line-height: 1.6; margin: 0; color: #333; }
+    
     .contact-grid { grid-template-columns: 1fr; gap: 15px; }
     .contact-card { width: 100%; box-sizing: border-box; padding: 20px; margin-bottom: 5px; height: auto !important; min-height: fit-content !important; }
     .contact-card p { word-wrap: break-word; overflow-wrap: break-word; white-space: normal; text-align: justify !important; }
     .full-width-coordinates { grid-column: span 1; padding: 15px 10px; }
     .full-width-coordinates p { font-size: 0.9em; line-height: 1.5; word-wrap: break-word; overflow-wrap: break-word; text-align: center !important; }
-    .grid { grid-template-columns: 1fr; }
     .card p, .post-preview p, #aboutWindow p, p { text-align: justify !important; }
-    body, .jurisdictions-list, .card, .post-preview { text-align: justify !important; }
+    body, .jurisdictions-list, .post-preview { text-align: justify !important; }
 }
