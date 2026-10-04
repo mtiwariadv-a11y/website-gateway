@@ -386,9 +386,10 @@ footer {
     .tab-label { padding: 12px 10px; font-size: 0.85em; text-align: center; flex: 1 1 45%; box-sizing: border-box; }
     .contact-grid { grid-template-columns: 1fr; gap: 15px; }
     .contact-card { width: 100%; box-sizing: border-box; padding: 20px; margin-bottom: 5px; height: auto !important; min-height: fit-content !important; }
-    .contact-card p { word-wrap: break-word; overflow-wrap: break-word; white-space: normal; }
+    .contact-card p { word-wrap: break-word; overflow-wrap: break-word; white-space: normal; text-align: justify !important; }
     .full-width-coordinates { grid-column: span 1; padding: 15px 10px; }
-    .full-width-coordinates p { font-size: 0.9em; line-height: 1.5; word-wrap: break-word; overflow-wrap: break-word; }
+    .full-width-coordinates p { font-size: 0.9em; line-height: 1.5; word-wrap: break-word; overflow-wrap: break-word; text-align: center !important; }
     .grid { grid-template-columns: 1fr; }
-    body, .jurisdictions-list, .card, .post-preview { text-align: justify; }
+    .card p, .post-preview p, #aboutWindow p, p { text-align: justify !important; }
+    body, .jurisdictions-list, .card, .post-preview { text-align: justify !important; }
 }
