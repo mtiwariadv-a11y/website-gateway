@@ -90,7 +90,8 @@
 
     <footer><p>&copy; 2026 LawNat | Manoj Kumar Tiwari, Advocate. All particulars published in strict accordance with Rule 36 of the Bar Council of India Rules.</p></footer>
 
-              <script>
+                <!-- REPROGRAMMED INTERACTIVE UNIVERSAL APP CONDUIT ENGINE -->
+    <script>
         function runLawNatContentLoader() {
             const container = document.getElementById('dynamicArticlesContainer');
             if (!container) return;
@@ -105,17 +106,31 @@
                 lawNatArticles.forEach((article, index) => {
                     const post = document.createElement('div');
                     post.className = 'post-preview';
-                    const shareText = encodeURIComponent(`Read: "${article.title}" on LawNat`);
-                    const url = encodeURIComponent(window.location.origin + window.location.pathname);
                     
-                    // CLEAN TARGET MAPPING: Reads everything out of the singular content parameter
+                    // UNIVERSAL DATA ARRAYS: Formats clean strings for both desktop and mobile app triggers
+                    const rawShareString = `Read: "${article.title}" on LawNat at ${window.location.origin}${window.location.pathname}`;
+                    const waFormattedText = encodeURIComponent(rawShareString);
+                    const currentUrlStr = encodeURIComponent(window.location.origin + window.location.pathname);
+                    
                     post.innerHTML = `
                         <h3>${article.title}</h3>
                         <span class="post-date">${article.date}</span>
                         <div id="tray-${index}" class="article-expanded-tray">
                             <p>${article.content}</p>
+                            
+                            <!-- PREMIUM DYNAMIC UNIVERSAL APPS SHARING DOCK -->
+                            <div class="article-share-bar">
+                                <span class="share-label">Share article:</span>
+                                <!-- API BOUND PATH: Works perfectly on all computer operating systems and handheld mobile terminals -->
+                                <a href="https://whatsapp.com{waFormattedText}" target="_blank" rel="noopener" class="share-btn" title="Share via WhatsApp">
+                                    <svg viewBox="0 0 24 24" width="100%" height="100%"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.84 14.02c-.25.7-1.44 1.28-1.99 1.34-.5.06-1.14.08-1.84-.15a11.13 11.13 0 0 1-4.66-2.92c-1.3-1.3-2.2-2.84-2.52-3.4-.33-.56-.04-.86.24-1.14l.56-.56c.08-.08.17-.11.23-.03.22.45.73 1.78.79 1.91.06.11.06.25-.03.42-.08.14-.14.23-.25.34-.11.11-.23.25-.11.45.45.76 1.01 1.41 1.72 1.94.59.45 1.07.68 1.24.76.17.08.28.06.37-.03.11-.11.48-.56.62-.76.14-.2.28-.17.48-.08.2.08 1.27.6 1.49.71.23.11.37.17.42.25.06.11.06.65-.19 1.35Z"/></svg>
+                                </a>
+                                <a href="https://linkedin.com{currentUrlStr}" target="_blank" rel="noopener" class="share-btn" title="Share on LinkedIn">
+                                    <svg viewBox="0 0 24 24" width="100%" height="100%"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.8v8.37h2.8v-4.67c0-.25.02-.5.1-.68a1.14 1.14 0 0 1 1-.77c.76 0 1 .58 1 1.42v4.7h2.8M6.5 8.37a1.37 1.37 0 1 0 0-2.75 1.37 1.37 0 0 0 0 2.75M8 18.5V10.13H5.2v8.37H8Z"/></svg>
+                                </a>
+                            </div>
                         </div>
-                        <button type="button" id="btn-${index}" class="read-more-toggle-btn">Read Article</button>
+                        <button type="button" id="btn-${index}" class="read-more-toggle-btn">Read Article Brief</button>
                     `;
                     container.appendChild(post);
                     
@@ -125,7 +140,7 @@
                     btn.addEventListener('click', () => {
                         if (tray.style.display === 'block') {
                             tray.style.display = 'none';
-                            btn.textContent = 'Read Article';
+                            btn.textContent = 'Read Article Brief';
                         } else {
                             tray.style.display = 'block';
                             btn.textContent = 'Hide Content';
@@ -137,18 +152,15 @@
 
         // TRIGGER CONTROL: Explicitly fires the loop ONLY when the Academic Section radio node is selected
         document.getElementById('tab3').addEventListener('change', (e) => {
-            if (e.target.checked) {
-                runLawNatContentLoader();
-            }
+            if (e.target.checked) { runLawNatContentLoader(); }
         });
 
         // Fail-safe check in case a deep-link directly references the academic viewport parameters
         window.addEventListener('load', () => {
-            if (document.getElementById('tab3').checked) {
-                runLawNatContentLoader();
-            }
+            if (document.getElementById('tab3').checked) { runLawNatContentLoader(); }
         });
     </script>
-    <script src="articles.js?v=production_success"></script>
+    <!-- Forces the server network to deploy the fresh app routing matrix -->
+    <script src="articles.js?v=999_universal_share"></script>
 </body>
 </html>
