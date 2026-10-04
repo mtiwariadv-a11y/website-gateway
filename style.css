@@ -390,5 +390,5 @@ footer {
     .full-width-coordinates { grid-column: span 1; padding: 15px 10px; }
     .full-width-coordinates p { font-size: 0.9em; line-height: 1.5; word-wrap: break-word; overflow-wrap: break-word; }
     .grid { grid-template-columns: 1fr; }
-    body, .jurisdictions-list, .card, .post-preview { text-align: left; }
+    body, .jurisdictions-list, .card, .post-preview { text-align: justify; }
 }
